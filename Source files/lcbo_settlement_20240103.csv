@@ -1,0 +1,14 @@
+settlement_id,settlement_date,store_id,store_name,store_city,item_id,item_description,category,supplier_name,units_sold,unit_price,gross_sales,discount_amount,net_sales,cost_of_goods,gross_margin
+SETT-2024-003,2024-01-03,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,45,34.95,1572.75,78.64,1494.11,900.00,594.11
+SETT-2024-003,2024-01-03,101,Queen's Quay LCBO,Toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,60,19.95,1197.00,59.85,1137.15,480.00,657.15
+SETT-2024-003,2024-01-03,101,Queen's Quay LCBO,Toronto,9.34512E+8,Casamigos Blanco Tequila 750mL,Tequila,Diageo,14,79.95,1119.30,0.00,1119.30,560.00,559.30
+SETT-2024-003,2024-01-03,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,125,38.95,4868.75,243.44,4625.31,2500.00,2125.31
+SETT-2024-003,2024-01-03,102,Bloor West Village LCBO,Toronto,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,26,41.95,1090.70,54.54,1036.16,572.00,464.16
+SETT-2024-003,2024-01-03,102,Bloor West Village LCBO,Toronto,8.92456E+8,Moët & Chandon Brut NV 750mL,Sparkling Wine,LVMH,9,64.95,584.55,0.00,584.55,270.00,314.55
+SETT-2024-003,2024-01-03,103,Kensington Market LCBO,Toronto,2.67803E+8,Absolut Vodka 750mL,Vodka,Pernod Ricard,48,29.95,1437.60,0.00,1437.60,672.00,765.60
+SETT-2024-003,2024-01-03,201,Elgin Street LCBO,Ottawa,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,33,34.95,1153.35,0.00,1153.35,660.00,493.35
+SETT-2024-003,2024-01-03,201,Elgin Street LCBO,Ottawa,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,76,38.95,2960.20,0.00,2960.20,1520.00,1440.20
+SETT-2024-003,2024-01-03,301,King Street LCBO,Hamilton,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,38,19.95,758.10,37.91,720.19,304.00,416.19
+SETT-2024-003,2024-01-03,301,King Street LCBO,Hamilton,6.01874E+8,Tanqueray London Dry Gin 750mL,Gin,Diageo,21,34.95,733.95,0.00,733.95,420.00,313.95
+SETT-2024-CORR-001,2024-01-01,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,-130,38.95,-5063.50,253.18,-4810.32,-2600.00,-2210.32
+SETT-2024-CORR-001,2024-01-01,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,127,38.95,4946.65,247.33,4699.32,2540.00,2159.32

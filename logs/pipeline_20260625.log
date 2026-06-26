@@ -1,0 +1,105 @@
+2026-06-25 20:32:11,301 - INFO - Successfully connected to Postgres
+2026-06-25 20:32:11,302 - ERROR - Batch audit failed: 'bool' object has no attribute 'cursor'
+2026-06-25 20:35:55,663 - INFO - Successfully connected to Postgres
+2026-06-25 20:35:55,731 - ERROR - Batch audit failed: syntax error at end of input
+LINE 4:         
+                ^
+
+2026-06-25 20:41:04,577 - INFO - Successfully connected to Postgres
+2026-06-25 20:41:04,685 - INFO - Found 1 already processed files in DB
+2026-06-25 20:41:04,686 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 20:41:04,686 - ERROR - Batch audit failed: unsupported operand type(s) for -: 'list' and 'set'
+2026-06-25 20:46:14,803 - INFO - Successfully connected to Postgres
+2026-06-25 20:46:14,885 - INFO - Found 1 already processed files in DB
+2026-06-25 20:46:14,885 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 20:46:14,885 - ERROR - Batch audit failed: unsupported operand type(s) for -: 'list' and 'set'
+2026-06-25 20:48:50,122 - INFO - Successfully connected to Postgres
+2026-06-25 20:48:50,199 - INFO - Found 1 already processed files in DB
+2026-06-25 20:48:50,201 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 20:48:50,201 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 20:48:50,201 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 20:48:50,201 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 20:48:50,217 - INFO - Postgres connection closed.
+2026-06-25 20:48:50,218 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 20:48:50,218 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 20:51:39,373 - INFO - Successfully connected to Postgres
+2026-06-25 20:51:39,455 - INFO - Found 1 already processed files in DB
+2026-06-25 20:51:39,456 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 20:51:39,456 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 20:51:39,456 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 20:51:39,456 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 20:51:39,474 - INFO - Postgres connection closed.
+2026-06-25 20:51:39,475 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 20:51:39,475 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 21:00:52,690 - INFO - Successfully connected to Postgres
+2026-06-25 21:00:52,772 - INFO - Found 1 already processed files in DB
+2026-06-25 21:00:52,773 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:00:52,774 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:00:52,774 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:00:52,774 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:00:52,793 - INFO - Postgres connection closed.
+2026-06-25 21:00:52,794 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 21:00:52,794 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 21:11:42,849 - INFO - Successfully connected to Postgres
+2026-06-25 21:11:42,930 - INFO - Found 1 already processed files in DB
+2026-06-25 21:11:42,930 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:11:42,931 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:11:42,931 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:11:42,931 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:11:42,951 - INFO - Postgres connection closed.
+2026-06-25 21:11:42,951 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 21:11:42,951 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 21:13:48,363 - INFO - Successfully connected to Postgres
+2026-06-25 21:13:48,448 - INFO - Found 1 already processed files in DB
+2026-06-25 21:13:48,449 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:13:48,449 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:13:48,449 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:13:48,449 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:13:48,472 - INFO - Postgres connection closed.
+2026-06-25 21:13:48,474 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 21:13:48,474 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 21:17:17,113 - INFO - Successfully connected to Postgres
+2026-06-25 21:17:17,190 - INFO - Found 1 already processed files in DB
+2026-06-25 21:17:17,190 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:17:17,191 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:17:17,191 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:17:17,191 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:17:17,207 - INFO - Postgres connection closed.
+2026-06-25 21:17:17,207 - ERROR -  Failed to create a batch for lcbo_settlement_20240102.csv : can only concatenate str (not "int") to str
+2026-06-25 21:17:17,207 - INFO - batch audit result: {'batch_created': False}
+2026-06-25 21:23:04,911 - INFO - Successfully connected to Postgres
+2026-06-25 21:23:04,997 - INFO - Found 1 already processed files in DB
+2026-06-25 21:23:04,998 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:23:04,998 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:23:04,998 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:23:04,998 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:23:05,039 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240102.csv at 2026-06-25 21:23:04.999387
+2026-06-25 21:23:05,039 - INFO - Postgres connection closed.
+2026-06-25 21:23:05,039 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 6, 25, 21, 23, 4, 999387)}
+2026-06-25 21:23:25,354 - INFO - Successfully connected to Postgres
+2026-06-25 21:23:25,436 - INFO - Found 1 already processed files in DB
+2026-06-25 21:23:25,437 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 21:23:25,437 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:23:25,437 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 21:23:25,437 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 21:23:25,477 - INFO - Created new batch with run_id 3 for lcbo_settlement_20240102.csv at 2026-06-25 21:23:25.437733
+2026-06-25 21:23:25,478 - INFO - Postgres connection closed.
+2026-06-25 21:23:25,478 - INFO - batch audit result: {'batch_created': True, 'batch_id': 3, 'related_date': datetime.datetime(2026, 6, 25, 21, 23, 25, 437733)}
+2026-06-25 22:39:15,844 - INFO - Successfully connected to Postgres
+2026-06-25 22:39:15,939 - INFO - Found 1 already processed files in DB
+2026-06-25 22:39:15,939 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 22:39:15,939 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 22:39:15,940 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 22:39:15,940 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 22:39:15,987 - INFO - Created new batch with run_id 4 for lcbo_settlement_20240102.csv at 2026-06-25 22:39:15.940899
+2026-06-25 22:39:15,987 - INFO - Postgres connection closed.
+2026-06-25 22:39:15,987 - INFO - batch audit result: {'batch_created': True, 'batch_id': 4, 'related_date': datetime.datetime(2026, 6, 25, 22, 39, 15, 940899)}
+2026-06-25 22:46:08,299 - INFO - Successfully connected to Postgres
+2026-06-25 22:46:08,339 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-25 22:46:08,339 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-25 22:46:08,339 - ERROR - Batch audit failed: cannot access local variable 'conn_close' where it is not associated with a value
+2026-06-25 22:48:26,311 - INFO - Successfully connected to Postgres
+2026-06-25 22:48:26,352 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-25 22:48:26,352 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-25 22:48:26,352 - INFO - Postgres connection closed.
+2026-06-25 22:48:26,353 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None}
