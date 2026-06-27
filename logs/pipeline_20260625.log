@@ -103,3 +103,29 @@ LINE 4:
 2026-06-25 22:48:26,352 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
 2026-06-25 22:48:26,352 - INFO - Postgres connection closed.
 2026-06-25 22:48:26,353 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None}
+2026-06-25 23:23:51,397 - INFO - Successfully connected to Postgres
+2026-06-25 23:23:51,397 - ERROR - Batch audit failed: cannot access local variable 'max_batch_id' where it is not associated with a value
+2026-06-25 23:28:42,299 - INFO - Successfully connected to Postgres
+2026-06-25 23:28:42,400 - INFO - Found 1 already processed files in DB
+2026-06-25 23:28:42,401 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-06-25 23:28:42,401 - INFO - Pending files to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 23:28:42,402 - INFO - 2 new file(s) to process: ['lcbo_settlement_20240102.csv', 'lcbo_settlement_20240103.csv']
+2026-06-25 23:28:42,402 - INFO - Started with lcbo_settlement_20240102.csv
+2026-06-25 23:28:42,444 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240102.csv at 2026-06-25 23:28:42.402323
+2026-06-25 23:28:42,444 - INFO - Postgres connection closed.
+2026-06-25 23:28:42,444 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 6, 25, 23, 28, 42, 402323)}
+2026-06-25 23:28:58,272 - INFO - Successfully connected to Postgres
+2026-06-25 23:28:58,319 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-25 23:28:58,319 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-25 23:28:58,319 - INFO - Postgres connection closed.
+2026-06-25 23:28:58,320 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None}
+2026-06-25 23:29:10,302 - INFO - Successfully connected to Postgres
+2026-06-25 23:29:10,350 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-25 23:29:10,350 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-25 23:29:10,350 - INFO - Postgres connection closed.
+2026-06-25 23:29:10,350 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None}
+2026-06-25 23:36:24,365 - INFO - Successfully connected to Postgres
+2026-06-25 23:36:24,404 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-25 23:36:24,404 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-25 23:36:24,404 - INFO - Postgres connection closed.
+2026-06-25 23:36:24,404 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None}

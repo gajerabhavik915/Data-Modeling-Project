@@ -59,12 +59,12 @@ def connect_postgres():
 # -------------------------------------------------
 def build_batch_audit():
     conn = connect_postgres()
-    curr = conn.cursor()
+    curr = conn.cursor
 
 
 
 
-    def pending_recods_exist(conn):
+    def pending_records_exist(conn):
         with conn.cursor() as curr:
             curr.execute(
                 '''
@@ -85,37 +85,8 @@ def build_batch_audit():
                 '''
             )
             max_batch_id = curr.fetchone()[0]
-            return max_batch_id
+        return max_batch_id
         
-
-
-
-     
-
-    
-    curr.execute(
-        '''
-        SELECT status FROM prec_pipeline_run_log
-        where run_id = %s
-        '''
-        ,(max_batch_id))
-    
-    
-    status_last_run = curr.fetchone()[0]
-
-    if not status_last_run or status_last_run in ('running', 'failed'):
-        logger.error(f"Last pipeline run with batch_id {max_batch_id} is still in progress or failed. Status: {status_last_run}. Cannot proceed with batch audit.")
-        logger.info("Please check the pipeline run log and resolve any issues before starting a new batch.")
-        curr.close()
-        conn.close()
-
-        return {
-            "batch_created": False,
-            "batch_id": max_batch_id,
-            "related_date": None
-        }
-
-
 
 
     def get_processed_files(conn):
@@ -189,10 +160,10 @@ def build_batch_audit():
 
 
     ### Step 1
-    # First check if any pending record exist in Database, then no action should be taken, 
-    # user should resolve the pending records first before creating a new batch.
+    # If any pending/failed record exist in Database, then no action should be taken, 
+    # user should resolve the pending/failed records first before creating a new batch.
 
-    pending_db_rows_exists = pending_recods_exist(conn)
+    pending_db_rows_exists = pending_records_exist(conn)
 
     if pending_db_rows_exists:
         logger.error("There are pending records in the pipeline run log. Cannot proceed with batch audit.")
@@ -225,7 +196,7 @@ def build_batch_audit():
         }
 
 
-    ### Step 2
+    ### Step 3
     # if no pending records exist in DB, then check if any new files are present in the source folder which are not yet processed.
 
     pending_files = get_pending_files(conn, os.getenv("source_file_path"))
@@ -263,7 +234,6 @@ def build_batch_audit():
 # because while importing the entire file will be executed and it will create a new log file for that file which is not what we want. 
 # We want to use the same log file for all the files in the project. 
 # So we use __name__ to get the name of the file which is being executed.
-
 
 
 if __name__ == "__main__":
