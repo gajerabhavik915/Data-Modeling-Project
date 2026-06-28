@@ -148,7 +148,8 @@ def build_batch_audit():
         return {
             "batch_created": True,
             "batch_id": new_batch_id,
-            "related_date": now
+            "related_date": now,
+            "all_processed_files": False
         }
      
 
@@ -174,7 +175,8 @@ def build_batch_audit():
         return {
             "batch_created": False,
             "batch_id": None,
-            "related_date": None
+            "related_date": None,
+            "all_processed_files": None
         }
 
     ### Step 2 
@@ -192,7 +194,8 @@ def build_batch_audit():
         return {
             "batch_created": False,
             "batch_id": None,
-            "related_date": None
+            "related_date": None,
+            "all_processed_files": False
         }
 
 
@@ -219,14 +222,23 @@ def build_batch_audit():
             conn_close(conn) # Close the connection after the audit is done
             logger.error(f" Failed to create a batch for {first_pending_file} : {e}")
             return {
-                "batch_created": False}
-        
+                    "batch_created": False,
+                    "batch_id": None,
+                    "related_date": None,
+                    "all_processed_files": False
+                    }
+                
             
     else:
         logger.info("No new files to process - pipeline is upto date")
         logger.info("Exiting batch audit.")
 
-        return True
+        return {
+                    "batch_created": False,
+                    "batch_id": None,
+                    "related_date": None,
+                    "all_processed_files": True
+                    }
         
 
 # sometimes you might see (_main_), if this entire file is being called by other file then we should use that to get file name in log filename.
@@ -246,5 +258,14 @@ if __name__ == "__main__":
 
 
 
+# there are three types of output from this file,
+# 1. if there are pending records in the log table, then it will 
+# return batch_created: False, batch_id: None, related_date: None, all_processed_files: None
 
-    
+# 2. if there are no pending records in the log table, 
+# but there are new files to process, then it will 
+# return batch_created: True, batch_id: <new_batch_id>, related_date: <timestamp>, all_processed_files: False
+
+# 3. if there are no pending records in the log table, 
+# and there are no new files to process, then it will 
+# return True.   
