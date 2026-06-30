@@ -1,0 +1,65 @@
+2026-06-28 15:55:34,032 - ERROR - Error connecting to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-28 15:55:34,032 - ERROR - Failed to connect to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-28 16:13:42,941 - INFO - Successfully connected to Postgres
+2026-06-28 16:13:47,110 - INFO - Successfully connected to Postgres
+2026-06-28 16:13:47,169 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-28 16:13:47,169 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-28 16:13:47,169 - INFO - Postgres connection closed.
+2026-06-28 16:13:47,208 - ERROR - Pipeline execution failed: column "run_status" does not exist
+LINE 4:                 WHERE run_status IN ('pending', 'failed')
+                              ^
+
+2026-06-28 16:13:47,208 - INFO - Postgres connection closed.
+2026-06-28 16:13:47,208 - ERROR - Pipeline execution failed: column "run_status" does not exist
+LINE 4:                 WHERE run_status IN ('pending', 'failed')
+                              ^
+
+2026-06-28 16:15:21,333 - INFO - Successfully connected to Postgres
+2026-06-28 16:15:25,495 - INFO - Successfully connected to Postgres
+2026-06-28 16:15:25,536 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-06-28 16:15:25,536 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-06-28 16:15:25,536 - INFO - Postgres connection closed.
+2026-06-28 16:15:25,572 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:15:25,573 - INFO - Postgres connection closed.
+2026-06-28 16:15:25,573 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:22:52,212 - INFO - Successfully connected to Postgres
+2026-06-28 16:22:52,255 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:22:52,255 - INFO - Postgres connection closed.
+2026-06-28 16:22:52,255 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:31:03,822 - INFO - Successfully connected to Postgres
+2026-06-28 16:31:03,861 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:31:03,862 - INFO - Postgres connection closed.
+2026-06-28 16:31:03,862 - INFO - Postgres connection closed.
+2026-06-28 16:31:03,862 - ERROR - Pipeline execution failed: expected str, bytes or os.PathLike object, not NoneType
+2026-06-28 16:34:35,995 - INFO - Successfully connected to Postgres
+2026-06-28 16:34:36,042 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:34:36,053 - ERROR - Error processing file: the query contains more than one '%s' placeholder
+2026-06-28 16:34:36,071 - INFO - Postgres connection closed.
+2026-06-28 16:45:09,375 - INFO - Successfully connected to Postgres
+2026-06-28 16:45:09,418 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:45:09,425 - ERROR - Error processing file: the query contains more than one '%s' placeholder
+2026-06-28 16:45:09,442 - INFO - Postgres connection closed.
+2026-06-28 16:45:51,842 - INFO - Successfully connected to Postgres
+2026-06-28 16:45:51,882 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:45:51,889 - ERROR - Error processing file: the query contains more than one '%s' placeholder
+2026-06-28 16:45:51,905 - INFO - Postgres connection closed.
+2026-06-28 16:48:06,583 - INFO - Successfully connected to Postgres
+2026-06-28 16:48:06,620 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:48:06,644 - ERROR - Error processing file: relation "prec_lcbo_raw" does not exist
+LINE 1: INSERT INTO prec_lcbo_raw (settlement_id,settlement_date,sto...
+                    ^
+
+2026-06-28 16:48:06,667 - INFO - Postgres connection closed.
+2026-06-28 16:50:04,114 - INFO - Successfully connected to Postgres
+2026-06-28 16:50:04,149 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:50:04,177 - ERROR - Error processing file: column "batchid" of relation "prec_lcbo_raw" does not exist
+LINE 1: ...,net_sales,cost_of_goods,gross_margin,source_file,BatchId,in...
+                                                             ^
+
+2026-06-28 16:50:04,199 - INFO - Postgres connection closed.
+2026-06-28 16:51:36,060 - INFO - Successfully connected to Postgres
+2026-06-28 16:51:36,096 - INFO - Processing file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 16:51:36,123 - INFO - Inserted batch of size 16 into Postgres.
+2026-06-28 16:51:36,141 - INFO - Postgres connection closed.

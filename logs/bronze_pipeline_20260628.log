@@ -1,0 +1,29 @@
+2026-06-28 17:08:29,499 - INFO - Successfully connected to Postgres
+2026-06-28 17:08:29,499 - INFO - Successfully connected to Postgres
+2026-06-28 17:08:29,499 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-06-28 17:08:29,540 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 2
+2026-06-28 17:08:29,540 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 17:08:29,565 - INFO - Inserted batch of size 16 into Postgres.
+2026-06-28 17:08:29,585 - INFO - File processed successfully.
+2026-06-28 17:08:29,586 - INFO - Postgres connection closed.
+2026-06-28 17:16:42,283 - INFO - Successfully connected to Postgres
+2026-06-28 17:16:42,283 - INFO - Successfully connected to Postgres
+2026-06-28 17:16:42,283 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-06-28 17:16:42,319 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 2
+2026-06-28 17:16:42,319 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 17:16:42,343 - INFO - Inserted batch of size 16 into Postgres.
+2026-06-28 17:16:42,366 - INFO - File processed successfully.
+2026-06-28 17:16:42,366 - INFO - Postgres connection closed.
+2026-06-28 17:22:36,012 - INFO - Successfully connected to Postgres
+2026-06-28 17:22:36,013 - INFO - Successfully connected to Postgres
+2026-06-28 17:22:36,013 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-06-28 17:22:36,075 - INFO - Data from file lcbo_settlement_20240102.csv already exists in Postgres. Skipping processing.
+2026-06-28 17:22:36,075 - INFO - Postgres connection closed.
+2026-06-28 17:25:00,292 - INFO - Successfully connected to Postgres
+2026-06-28 17:25:00,293 - INFO - Successfully connected to Postgres
+2026-06-28 17:25:00,294 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-06-28 17:25:00,351 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 2
+2026-06-28 17:25:00,351 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-28 17:25:00,389 - INFO - Inserted batch of size 16 into Postgres.
+2026-06-28 17:25:00,417 - INFO - File processed successfully.
+2026-06-28 17:25:00,417 - INFO - Postgres connection closed.

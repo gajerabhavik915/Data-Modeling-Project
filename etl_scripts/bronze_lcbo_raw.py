@@ -4,10 +4,11 @@ import sys
 import logging
 from datetime import datetime
 from unittest import result
-from pandas import pd
+import pandas as pd
 import psycopg2 
+from psycopg2.extras import execute_values
 from dotenv import load_dotenv
-from bronze_batch_audit import build_batch_audit, connect_postgres
+from bronze_batch_audit import connect_postgres
 
 
 # -------------------------------------------------
@@ -27,7 +28,8 @@ logging.basicConfig(
     handlers=[
         logging.FileHandler(log_filename),
         logging.StreamHandler()
-    ]
+    ],
+    force=True  
 )
 
 
@@ -41,16 +43,15 @@ load_dotenv()
 # Configuration
 # -------------------------------------------------
 BATCH_SIZE = 5000
-COLUMNS = [
-    ["settlement_id", "settlement_date", "store_id", "store_name", 
+COLUMNS = ["settlement_id", "settlement_date", "store_id", "store_name", 
      "store_city", "item_id", "item_description", "category", 
      "supplier_name", "units_sold", "unit_price", "gross_sales", 
      "discount_amount", "net_sales", "cost_of_goods", "gross_margin"]
-]
-AUDIT_COLUMNS = ["source_file", "BatchId", "ingested_at", "is_active"]
+    
+AUDIT_COLUMNS = ["source_file", "batch_id", "ingested_at", "is_active"]
 
 ALL_COLUMNS = COLUMNS + AUDIT_COLUMNS
-PLACEHOLDERS = ",".join(["?"] * len(ALL_COLUMNS))
+PLACEHOLDERS = ",".join(["%s"] * (len(ALL_COLUMNS)))
 COLUMN_SQL = ",".join(ALL_COLUMNS)
 
 # -------------------------------------------------
@@ -59,19 +60,9 @@ COLUMN_SQL = ",".join(ALL_COLUMNS)
 
 try:
     conn = connect_postgres()
+    logger.info("Successfully connected to Postgres")
 except Exception as e:
     logger.error(f"Failed to connect to Postgres: {e}")
-    sys.exit(1)
-
-
-# -------------------------------------------------
-# findout file that Needs to Process
-# -------------------------------------------------
-
-try:
-    batch_result = build_batch_audit()
-except Exception as e:
-    logger.error(f"Failed to build batch audit: {e}")
     sys.exit(1)
 
 
@@ -80,9 +71,13 @@ except Exception as e:
 # -----------------------------------------------------
 class LoadingData_ToPostgres:
     def __init__(self, conn):
+        # create all required varibales to be used in the class. good practice to create all variables in the init method.
         self.conn = conn
-        self.batch_id = batch_result["batch_id"]
-
+        self.batch_id = None
+        self.source_file = None 
+        self.started_at = None
+        logger.info("LoadingData_ToPostgres class initialized successfully.")
+        
 
     def get_last_run_id(self, conn):
         with conn.cursor() as curr:
@@ -90,20 +85,35 @@ class LoadingData_ToPostgres:
                 '''
                 SELECT run_id, source_file, started_at
                 FROM prec_pipeline_run_log
-                WHERE run_status IN ('pending', 'failed')
+                WHERE status IN ('pending', 'failed')
                 ORDER BY run_id DESC
                 LIMIT 1
                 '''
             )
             row = curr.fetchone()
+            print(row)
             self.batch_id, self.source_file, self.started_at = row if row else (None, None, None)
             return self.batch_id, self.source_file, self.started_at
         
+
     def get_file_location(self, file_name):
-        folder_path = os.getenv("LCBO_RAW_FOLDER_PATH")
+        folder_path = os.getenv("source_file_path")
         file_path = os.path.join(folder_path, file_name)
         return file_path
 
+    
+    def data_exists_in_postgres(self, conn, source_file):
+        with conn.cursor() as curr:
+            curr.execute(
+                '''
+                SELECT distinct(source_file) FROM prec_lcbo_raw
+                WHERE source_file = %s and is_active = 'true'
+                ''',
+                (source_file,)
+            )
+            result = curr.fetchone()
+            return result is not None
+            
 
     def read_csv_file_inbatch(self, file_path):
         try:
@@ -113,83 +123,92 @@ class LoadingData_ToPostgres:
             logger.error(f"Error reading CSV file in batches: {e}")
             raise
 
-    def insert_batch_to_postgres(self, df, conn):
-        try:
-            with conn.cursor() as curr:
-                for _, row in df.iterrows():
-                    values = tuple(row[col] for col in ALL_COLUMNS)
-                    curr.execute(
-                        f"INSERT INTO prec_lcbo_raw ({COLUMN_SQL}) VALUES ({PLACEHOLDERS})",
-                        values
-                    )
-            self.conn.commit()
-        except Exception as e:
-            logger.error(f"Error inserting batch to Postgres: {e}")
-            self.conn.rollback()
-            raise
-    
 
-    
-
-
-
-def get_last_run_id(conn):
-        with conn.cursor() as curr:
-            curr.execute(
-                '''
-                SELECT MAX(run_id) FROM prec_pipeline_run_log
-                where run_status in ('pending', 'failed')
-                '''
+    def insert_batch_to_postgres(self, df):
+        with self.conn.cursor() as curr:
+            rows = [tuple(row[col] for col in ALL_COLUMNS) for _, row in df.iterrows()]
+            execute_values(
+                curr,
+                f"INSERT INTO prec_lcbo_raw ({COLUMN_SQL}) VALUES %s",
+                rows
             )
-            max_batch_id = curr.fetchone()[0]
-        return max_batch_id
+            return len(rows)
+            
+  
+    def add_ingestion_metadata(self, df):
+        df["source_file"] = self.source_file
+        df["batch_id"] = self.batch_id
+        df["ingested_at"] = datetime.now()
+        df["is_active"] = True
+        return df
 
-
-def get_file_to_process(conn):
-    with conn.cursor() as curr:
-        curr.execute(
-            '''
-            SELECT DISTINCT file_name FROM prec_pipeline_run_log
-            WHERE run_id = %s
-            ''',
-            (get_last_run_id(conn),)
-        )
-
-        file = [row[0] for row in curr.fetchall()]
-    return file
-
-
-if batch_result["all_processed_files"]:
-    logger.info("There are no new files to process.")
-
-else:
-    # code is going to chnage from here.
-
-    if not batch_result["batch_created"]:
-        last_run_id = get_last_run_id(conn)
-        batch_result["batch_created"] = True
-        batch_result["batch_id"] = last_run_id
-        logger.info(f"Pending records exist in the log table. Last run ID: {last_run_id}. Exiting pipeline.")
-        sys.exit(0)
-
-    file_name = get_file_to_process(conn)
-
-    try:
-        if file_name:
-            logger.info(f"File to process: {file_name[0]}")
-            folder_path = os.getenv("LCBO_RAW_FOLDER_PATH")
-            file_path = os.path.join(folder_path, file_name[0])
-            raw_df = pd.read_csv(file_path)
+    
+    def process_file(self):
+        self.get_last_run_id(self.conn)
+        if not self.source_file:
+            logger.info("No pending or failed runs found. Exiting pipeline.")
+            sys.exit(0)
         
-        else:
-            logger.info("No new files to process in batch_audit table.")
+        if self.data_exists_in_postgres(self.conn, self.source_file):
+            logger.info(f"Data from file {self.source_file} already exists in Postgres. Skipping processing.")
+            sys.exit(0)
 
+        logger.info(f"Processing file: {self.source_file} with batch ID: {self.batch_id}")
+
+        file_path = self.get_file_location(self.source_file)
+        logger.info(f"Found file: {file_path}")
+    
+        try:
+            for chunk in self.read_csv_file_inbatch(file_path):
+                chunk_with_metadata = self.add_ingestion_metadata(chunk)
+                self.insert_batch_to_postgres(chunk_with_metadata)
+                logger.info(f"Inserted batch of size {len(chunk)} into Postgres.")
+
+            self.conn.commit()
+            logger.info("File processed successfully.")
+            return True
+        
+        except Exception as e:
+            logger.error(f"Error processing file: {e}")
+            self.conn.rollback()
+            sys.exit(1)
+            
+
+    def close_connection(self):
+        if self.conn:
+            self.conn.close()
+            logger.info("Postgres connection closed.")
+
+
+# -------------------------------------------------
+# Airflow-compatible function
+# -------------------------------------------------
+
+def execute_pipeline(**kwargs):
+    mig = LoadingData_ToPostgres(conn)
+    try:
+        mig.process_file()
     except Exception as e:
-        logger.error(f"Error while fetching the raw file to process: {e}")
+        logger.error(f"Pipeline execution failed: {e}")
+        if conn:
+            mig.close_connection()
+        raise
+    finally:
+        mig.close_connection()
+
+
+# -------------------------------------------------
+# Manual Execution
+# -------------------------------------------------
+
+if __name__ == "__main__":
+    try:
+        execute_pipeline()
+    except Exception as e:
+        logger.error(f"Pipeline execution failed: {e}")
         sys.exit(1)
 
 
-    
     
 
 

@@ -1,0 +1,16 @@
+2026-06-29 21:41:05,932 - ERROR - Error connecting to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-29 21:41:05,933 - ERROR - Failed to connect to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-29 21:42:38,034 - ERROR - Error connecting to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-29 21:42:38,035 - ERROR - Failed to connect to Postgres: could not translate host name "ASL-CL-DB2" to address: Name or service not known
+
+2026-06-29 21:42:54,659 - INFO - Successfully connected to Postgres
+2026-06-29 21:42:54,661 - INFO - Successfully connected to Postgres
+2026-06-29 21:42:54,661 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-06-29 21:42:54,732 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 2
+2026-06-29 21:42:54,732 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-06-29 21:42:54,757 - INFO - Inserted batch of size 16 into Postgres.
+2026-06-29 21:42:54,783 - INFO - File processed successfully.
+2026-06-29 21:42:54,783 - INFO - Postgres connection closed.
