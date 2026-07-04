@@ -1,0 +1,5 @@
+2026-07-01 21:35:06,778 - INFO - Successfully connected to Postgres
+2026-07-01 21:35:06,779 - INFO - Successfully connected to Postgres
+2026-07-01 21:35:06,779 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-01 21:35:06,851 - INFO - Data from file lcbo_settlement_20240102.csv already exists in Postgres. Skipping processing.
+2026-07-01 21:35:06,852 - INFO - Postgres connection closed.

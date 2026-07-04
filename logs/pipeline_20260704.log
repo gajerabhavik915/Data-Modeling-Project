@@ -1,0 +1,33 @@
+2026-07-04 13:10:50,177 - INFO - Successfully connected to Postgres
+2026-07-04 13:10:50,219 - ERROR - Batch audit failed: column "prec_pipeline_run_log.run_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 4:                 order by run_id asc
+                                 ^
+
+2026-07-04 13:11:24,372 - INFO - Successfully connected to Postgres
+2026-07-04 13:11:24,468 - INFO - Found 0 already processed files in DB
+2026-07-04 13:11:24,471 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-04 13:11:24,471 - INFO - Pending files to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 13:11:24,472 - INFO - 3 new file(s) to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 13:11:24,472 - INFO - Started with 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-04 13:11:24,513 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240103.csv at 2026-07-04 13:11:24.472650
+2026-07-04 13:11:24,514 - INFO - Postgres connection closed.
+2026-07-04 13:11:24,514 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 7, 4, 13, 11, 24, 472650), 'file_hash': '4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', 'all_processed_files': False}
+2026-07-04 13:13:53,899 - INFO - Successfully connected to Postgres
+2026-07-04 13:13:53,983 - INFO - Found 1 already processed files in DB
+2026-07-04 13:13:53,984 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-04 13:13:53,984 - INFO - Pending files to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 13:13:53,984 - INFO - 3 new file(s) to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 13:13:53,985 - INFO - Started with 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-04 13:13:54,025 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240103.csv at 2026-07-04 13:13:53.985702
+2026-07-04 13:13:54,025 - INFO - Postgres connection closed.
+2026-07-04 13:13:54,025 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 7, 4, 13, 13, 53, 985702), 'file_hash': '4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', 'all_processed_files': False}
+2026-07-04 13:14:04,761 - INFO - Successfully connected to Postgres
+2026-07-04 13:14:04,799 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-07-04 13:14:04,799 - INFO - Please check the pipeline run log and resolve any issues before starting a new batch.
+2026-07-04 13:14:04,800 - INFO - Postgres connection closed.
+2026-07-04 13:14:04,800 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None, 'all_processed_files': None, 'file_hash': None}
+2026-07-04 13:14:47,460 - INFO - Successfully connected to Postgres
+2026-07-04 13:14:47,498 - ERROR - There are pending records in the pipeline run log. Cannot proceed with batch audit.
+2026-07-04 13:14:47,499 - INFO - Please check the pipeline run log and resolve any pending/failed file issues before starting a new batch.
+2026-07-04 13:14:47,499 - INFO - Postgres connection closed.
+2026-07-04 13:14:47,499 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None, 'all_processed_files': None, 'file_hash': None}
