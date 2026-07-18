@@ -1,0 +1,8 @@
+2026-07-18 14:08:41,819 - INFO - Successfully connected to Postgres
+2026-07-18 14:08:41,820 - INFO - Successfully connected to Postgres
+2026-07-18 14:08:41,820 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-18 14:08:41,821 - INFO - Processing file: lcbo_settlement_20240103.csv with batch ID: 2 and file hash: 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-18 14:08:41,822 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240103.csv
+2026-07-18 14:08:41,833 - INFO - Inserted batch of size 13 into Postgres.
+2026-07-18 14:08:41,835 - INFO - File processed successfully.
+2026-07-18 14:08:41,835 - INFO - Postgres connection closed.

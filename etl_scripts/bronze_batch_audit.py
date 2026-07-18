@@ -72,7 +72,7 @@ def build_batch_audit():
             curr.execute(
                 # out of all pending and failed records, we only want to run the first one, so we will order by run_id ascending
                 '''
-                SELECT COUNT(*) FROM prec_pipeline_run_log
+                SELECT COUNT(*) FROM bronze.pipeline_run_log
                 where status in ('pending', 'failed')
                 '''
             )
@@ -85,7 +85,7 @@ def build_batch_audit():
         with conn.cursor() as curr:
             curr.execute(
                 '''
-                SELECT MAX(run_id) FROM prec_pipeline_run_log
+                SELECT MAX(run_id) FROM bronze.pipeline_run_log
                 '''
             )
             max_batch_id = curr.fetchone()[0]
@@ -97,7 +97,7 @@ def build_batch_audit():
         with conn.cursor() as curr:  # This will automatically close the cursor when jumping out of the function (not the connection).
             curr.execute(
                 '''
-                SELECT DISTINCT file_hash from prec_pipeline_run_log
+                SELECT DISTINCT file_hash from bronze.pipeline_run_log
                 where status = 'success'
                 '''
             )
@@ -160,7 +160,7 @@ def build_batch_audit():
         with conn.cursor() as curr:
             curr.execute(
                 '''
-                INSERT INTO prec_pipeline_run_log(run_id, source_file, started_at, status, file_hash)
+                INSERT INTO bronze.pipeline_run_log(run_id, source_file, started_at, status, file_hash)
                 VALUES (%s, %s, %s, %s, %s)
                 ''',
                 (new_batch_id, str(first_pending_file), now, 'pending', first_pending_file_hash)

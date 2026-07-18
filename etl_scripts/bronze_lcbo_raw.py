@@ -48,7 +48,7 @@ COLUMNS = ["settlement_id", "settlement_date", "store_id", "store_name",
      "supplier_name", "units_sold", "unit_price", "gross_sales", 
      "discount_amount", "net_sales", "cost_of_goods", "gross_margin"]
     
-AUDIT_COLUMNS = ["source_file", "batch_id", "ingested_at", "is_active"]
+AUDIT_COLUMNS = ["source_file", "batch_id", "ingested_at", "is_active", "file_hash"]
 
 ALL_COLUMNS = COLUMNS + AUDIT_COLUMNS
 PLACEHOLDERS = ",".join(["%s"] * (len(ALL_COLUMNS)))
@@ -76,6 +76,7 @@ class LoadingData_ToPostgres:
         self.batch_id = None
         self.source_file = None 
         self.started_at = None
+        self.file_hash = None
         logger.info("LoadingData_ToPostgres class initialized successfully.")
         
 
@@ -83,17 +84,17 @@ class LoadingData_ToPostgres:
         with conn.cursor() as curr:
             curr.execute(
                 '''
-                SELECT run_id, source_file, started_at
-                FROM prec_pipeline_run_log
+                SELECT run_id, source_file, started_at, file_hash
+                FROM bronze.pipeline_run_log
                 WHERE status IN ('pending', 'failed')
-                ORDER BY run_id DESC
+                ORDER BY run_id 
                 LIMIT 1
                 '''
             )
             row = curr.fetchone()
-            print(row)
-            self.batch_id, self.source_file, self.started_at = row if row else (None, None, None)
-            return self.batch_id, self.source_file, self.started_at
+            
+            self.batch_id, self.source_file, self.started_at, self.file_hash = row if row else (None, None, None, None)
+            return self.batch_id, self.source_file, self.started_at, self.file_hash
         
 
     def get_file_location(self, file_name):
@@ -102,14 +103,14 @@ class LoadingData_ToPostgres:
         return file_path
 
     
-    def data_exists_in_postgres(self, conn, source_file):
+    def data_exists_in_postgres(self, conn, file_hash):
         with conn.cursor() as curr:
             curr.execute(
                 '''
-                SELECT distinct(source_file) FROM prec_lcbo_raw
-                WHERE source_file = %s and is_active = 'true'
+                SELECT distinct(file_hash) FROM bronze.stg_lcbo_settlement
+                WHERE file_hash = %s and is_active = 'true'
                 ''',
-                (source_file,)
+                (file_hash,)
             )
             result = curr.fetchone()
             return result is not None
@@ -129,7 +130,7 @@ class LoadingData_ToPostgres:
             rows = [tuple(row[col] for col in ALL_COLUMNS) for _, row in df.iterrows()]
             execute_values(
                 curr,
-                f"INSERT INTO prec_lcbo_raw ({COLUMN_SQL}) VALUES %s",
+                f"INSERT INTO bronze.stg_lcbo_settlement ({COLUMN_SQL}) VALUES %s",
                 rows
             )
             return len(rows)
@@ -140,6 +141,7 @@ class LoadingData_ToPostgres:
         df["batch_id"] = self.batch_id
         df["ingested_at"] = datetime.now()
         df["is_active"] = True
+        df["file_hash"] = self.file_hash
         return df
 
     
@@ -149,11 +151,11 @@ class LoadingData_ToPostgres:
             logger.info("No pending or failed runs found. Exiting pipeline.")
             sys.exit(0)
         
-        if self.data_exists_in_postgres(self.conn, self.source_file):
+        if self.data_exists_in_postgres(self.conn, self.file_hash):
             logger.info(f"Data from file {self.source_file} already exists in Postgres. Skipping processing.")
             sys.exit(0)
 
-        logger.info(f"Processing file: {self.source_file} with batch ID: {self.batch_id}")
+        logger.info(f"Processing file: {self.source_file} with batch ID: {self.batch_id} and file hash: {self.file_hash}")
 
         file_path = self.get_file_location(self.source_file)
         logger.info(f"Found file: {file_path}")

@@ -1,0 +1,14 @@
+2026-07-18 13:55:30,284 - INFO - Successfully connected to Postgres
+2026-07-18 13:55:30,285 - ERROR - Batch audit failed: relation "prec_pipeline_run_log" does not exist
+LINE 2:                 SELECT COUNT(*) FROM prec_pipeline_run_log
+                                             ^
+
+2026-07-18 13:55:50,260 - INFO - Successfully connected to Postgres
+2026-07-18 13:55:50,265 - INFO - Found 1 already processed files in DB
+2026-07-18 13:55:50,268 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-18 13:55:50,269 - INFO - Pending files to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-18 13:55:50,269 - INFO - 3 new file(s) to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-18 13:55:50,269 - INFO - Started with 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-18 13:55:50,270 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240103.csv at 2026-07-18 13:55:50.269005
+2026-07-18 13:55:50,270 - INFO - Postgres connection closed.
+2026-07-18 13:55:50,270 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 7, 18, 13, 55, 50, 269005), 'file_hash': '4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', 'all_processed_files': False}

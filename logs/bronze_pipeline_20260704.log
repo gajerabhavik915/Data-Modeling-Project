@@ -1,0 +1,47 @@
+2026-07-04 15:31:36,027 - INFO - Successfully connected to Postgres
+2026-07-04 15:31:36,027 - INFO - Successfully connected to Postgres
+2026-07-04 15:31:36,028 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 15:31:36,092 - INFO - Processing file: lcbo_settlement_20240103.csv with batch ID: 2 and file hash: 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-04 15:31:36,093 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240103.csv
+2026-07-04 15:31:36,120 - INFO - Inserted batch of size 13 into Postgres.
+2026-07-04 15:31:36,145 - INFO - File processed successfully.
+2026-07-04 15:31:36,145 - INFO - Postgres connection closed.
+2026-07-04 15:35:49,429 - INFO - Successfully connected to Postgres
+2026-07-04 15:35:49,429 - INFO - Successfully connected to Postgres
+2026-07-04 15:35:49,429 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 15:35:49,496 - INFO - Data from file lcbo_settlement_20240103.csv already exists in Postgres. Skipping processing.
+2026-07-04 15:35:49,496 - INFO - Postgres connection closed.
+2026-07-04 15:41:47,523 - INFO - Successfully connected to Postgres
+2026-07-04 15:41:47,523 - INFO - Successfully connected to Postgres
+2026-07-04 15:41:47,523 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 15:41:47,557 - INFO - No pending or failed runs found. Exiting pipeline.
+2026-07-04 15:41:47,557 - INFO - Postgres connection closed.
+2026-07-04 15:43:19,419 - INFO - Successfully connected to Postgres
+2026-07-04 15:43:19,420 - INFO - Successfully connected to Postgres
+2026-07-04 15:43:19,420 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 15:43:19,475 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 3 and file hash: 5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917
+2026-07-04 15:43:19,476 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240102.csv
+2026-07-04 15:43:19,508 - INFO - Inserted batch of size 16 into Postgres.
+2026-07-04 15:43:19,528 - INFO - File processed successfully.
+2026-07-04 15:43:19,528 - INFO - Postgres connection closed.
+2026-07-04 15:47:11,246 - INFO - Successfully connected to Postgres
+2026-07-04 15:47:11,247 - INFO - Successfully connected to Postgres
+2026-07-04 15:47:11,247 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 15:47:11,309 - INFO - Processing file: lcbo_settlement_20240103.csv with batch ID: 4 and file hash: 4ef9c486a3ae57208dce4eb3b78710f725594fc77f292e27776a08569193d5f3
+2026-07-04 15:47:11,310 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240103.csv
+2026-07-04 15:47:11,347 - INFO - Inserted batch of size 7 into Postgres.
+2026-07-04 15:47:11,372 - INFO - File processed successfully.
+2026-07-04 15:47:11,373 - INFO - Postgres connection closed.
+2026-07-04 16:43:26,092 - INFO - Successfully connected to Postgres
+2026-07-04 16:43:26,092 - INFO - Successfully connected to Postgres
+2026-07-04 16:43:26,093 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 16:43:26,161 - INFO - Processing file: lcbo_settlement_20240103.csv with batch ID: 2 and file hash: 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-04 16:43:26,161 - INFO - Found file: C:\Users\BhavikG\Data Modeling Project\Source files\lcbo_settlement_20240103.csv
+2026-07-04 16:43:26,185 - INFO - Inserted batch of size 13 into Postgres.
+2026-07-04 16:43:26,205 - INFO - File processed successfully.
+2026-07-04 16:43:26,206 - INFO - Postgres connection closed.
+2026-07-04 16:44:04,711 - INFO - Successfully connected to Postgres
+2026-07-04 16:44:04,712 - INFO - Successfully connected to Postgres
+2026-07-04 16:44:04,712 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-07-04 16:44:04,766 - INFO - Data from file lcbo_settlement_20240103.csv already exists in Postgres. Skipping processing.
+2026-07-04 16:44:04,766 - INFO - Postgres connection closed.

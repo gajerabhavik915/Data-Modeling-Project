@@ -31,3 +31,30 @@ LINE 4:                 order by run_id asc
 2026-07-04 13:14:47,499 - INFO - Please check the pipeline run log and resolve any pending/failed file issues before starting a new batch.
 2026-07-04 13:14:47,499 - INFO - Postgres connection closed.
 2026-07-04 13:14:47,499 - INFO - batch audit result: {'batch_created': False, 'batch_id': None, 'related_date': None, 'all_processed_files': None, 'file_hash': None}
+2026-07-04 15:42:57,806 - INFO - Successfully connected to Postgres
+2026-07-04 15:42:57,878 - INFO - Found 2 already processed files in DB
+2026-07-04 15:42:57,880 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-04 15:42:57,880 - INFO - Pending files to process: ['5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 15:42:57,880 - INFO - 2 new file(s) to process: ['5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 15:42:57,880 - INFO - Started with 5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917
+2026-07-04 15:42:57,916 - INFO - Created new batch with run_id 3 for lcbo_settlement_20240102.csv at 2026-07-04 15:42:57.880056
+2026-07-04 15:42:57,917 - INFO - Postgres connection closed.
+2026-07-04 15:42:57,917 - INFO - batch audit result: {'batch_created': True, 'batch_id': 3, 'related_date': datetime.datetime(2026, 7, 4, 15, 42, 57, 880056), 'file_hash': '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'all_processed_files': False}
+2026-07-04 15:46:01,428 - INFO - Successfully connected to Postgres
+2026-07-04 15:46:01,500 - INFO - Found 3 already processed files in DB
+2026-07-04 15:46:01,501 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-04 15:46:01,501 - INFO - Pending files to process: ['4ef9c486a3ae57208dce4eb3b78710f725594fc77f292e27776a08569193d5f3', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 15:46:01,502 - INFO - 2 new file(s) to process: ['4ef9c486a3ae57208dce4eb3b78710f725594fc77f292e27776a08569193d5f3', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 15:46:01,502 - INFO - Started with 4ef9c486a3ae57208dce4eb3b78710f725594fc77f292e27776a08569193d5f3
+2026-07-04 15:46:01,541 - INFO - Created new batch with run_id 4 for lcbo_settlement_20240103.csv at 2026-07-04 15:46:01.502859
+2026-07-04 15:46:01,541 - INFO - Postgres connection closed.
+2026-07-04 15:46:01,541 - INFO - batch audit result: {'batch_created': True, 'batch_id': 4, 'related_date': datetime.datetime(2026, 7, 4, 15, 46, 1, 502859), 'file_hash': '4ef9c486a3ae57208dce4eb3b78710f725594fc77f292e27776a08569193d5f3', 'all_processed_files': False}
+2026-07-04 16:42:46,045 - INFO - Successfully connected to Postgres
+2026-07-04 16:42:46,137 - INFO - Found 1 already processed files in DB
+2026-07-04 16:42:46,138 - INFO - Found 3 files in folder C:\Users\BhavikG\Data Modeling Project\Source files
+2026-07-04 16:42:46,138 - INFO - Pending files to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 16:42:46,139 - INFO - 3 new file(s) to process: ['4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', '5f4d4d12db9b3286333dcb373dfd830dbd16f3bf1e05e56db6e0ea05924d7917', 'bdcd88c7ef6248fba903eea163604966f0773e752866b6d09d7af3ae72caae18']
+2026-07-04 16:42:46,139 - INFO - Started with 4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484
+2026-07-04 16:42:46,176 - INFO - Created new batch with run_id 2 for lcbo_settlement_20240103.csv at 2026-07-04 16:42:46.139513
+2026-07-04 16:42:46,176 - INFO - Postgres connection closed.
+2026-07-04 16:42:46,176 - INFO - batch audit result: {'batch_created': True, 'batch_id': 2, 'related_date': datetime.datetime(2026, 7, 4, 16, 42, 46, 139513), 'file_hash': '4b44043270cd9f167701ea2e0360fa742767d142a978c536fbed2002fa9ee484', 'all_processed_files': False}
