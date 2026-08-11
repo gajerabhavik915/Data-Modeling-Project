@@ -1,19 +1,16 @@
 settlement_id,settlement_date,store_id,store_name,store_city,item_id,item_description,category,supplier_name,units_sold,unit_price,gross_sales,discount_amount,net_sales,cost_of_goods,gross_margin
-SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,42,34.95,1467.90,73.40,1394.50,820.00,574.50
-SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,28,39.95,1118.60,0.00,1118.60,660.00,458.60
-SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,55,19.95,1097.25,54.86,1042.39,440.00,602.39
-SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,130,38.95,5063.50,253.18,4810.32,2600.00,2210.32
-SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,6.01874E+8,Tanqueray London Dry Gin 750mL,Gin,Diageo,19,34.95,664.05,0.00,664.05,380.00,284.05
-SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,31,34.95,1083.45,0.00,1083.45,620.00,463.45
-SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,67,19.95,1336.65,66.83,1269.82,536.00,733.82
-SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,95,38.95,3700.25,185.01,3515.24,1900.00,1615.24
-SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,8.92456E+8,Moët & Chandon Brut NV 750mL,Sparkling Wine,LVMH,12,64.95,779.40,0.00,779.40,360.00,419.40
+SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,42,34.95,"1,467.90",73.40,"1,394.50",820.00,574.50
+SETT-2024-001,01/01/2024,101,Queen's Quay LCBO,toronto,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,28,$39.95,1118.60,0.00,1118.60,660.00,458.60
+SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,  Toronto ,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,55,19.95,1097.25,54.86,1042.39,440.00,602.39
+SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,130,38.95,"5,063.50",253.18,"4,810.32","2,600.00","2,210.32"
+SETT-2024-001,2024-01-01,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,130,38.95,"5,063.50",253.18,"4,810.32","2,600.00","2,210.32"
+SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,TORONTO,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,beam suntory,31,34.95,1083.45,0.00,1083.45,620.00,463.45
+SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,67,19.95,"1,336.65",66.83,1269.82,536.00,733.82
+SETT-2024-001,2024-01-01,102,Bloor West Village LCBO,Toronto,8.92456E+8,Moët & Chandon Brut NV 750mL,Sparkling Wine,,12,64.95,779.40,0.00,779.40,360.00,419.40
 SETT-2024-001,2024-01-01,103,Kensington Market LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,18,34.95,629.10,0.00,629.10,360.00,269.10
-SETT-2024-001,2024-01-01,103,Kensington Market LCBO,Toronto,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,22,39.95,878.90,43.95,834.95,528.00,306.95
+SETT-2024-001,2024-01-01,103,Kensington Market LCBO,,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,22,39.95,878.90,43.95,834.95,528.00,306.95
 SETT-2024-001,2024-01-01,103,Kensington Market LCBO,Toronto,2.67803E+8,Absolut Vodka 750mL,Vodka,Pernod Ricard,44,29.95,1317.80,0.00,1317.80,616.00,701.80
 SETT-2024-001,2024-01-01,201,Elgin Street LCBO,Ottawa,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,88,38.95,3427.60,0.00,3427.60,1760.00,1667.60
 SETT-2024-001,2024-01-01,201,Elgin Street LCBO,Ottawa,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,41,19.95,818.95,40.95,778.00,328.00,450.00
-SETT-2024-001,2024-01-01,201,Elgin Street LCBO,Ottawa,6.01874E+8,Tanqueray London Dry Gin 750mL,Gin,Diageo,25,34.95,873.75,0.00,873.75,500.00,373.75
 SETT-2024-001,2024-01-01,301,King Street LCBO,Hamilton,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Beam Suntory,27,34.95,943.65,0.00,943.65,540.00,403.65
 SETT-2024-001,2024-01-01,301,King Street LCBO,Hamilton,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,112,38.95,4362.40,218.12,4144.28,2240.00,1904.28
-SETT-2024-001,2024-01-01,301,King Street LCBO,Hamilton,2.67803E+8,Absolut Vodka 750mL,Vodka,Pernod Ricard,33,29.95,988.35,0.00,988.35,462.00,526.35

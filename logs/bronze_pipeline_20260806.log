@@ -1,0 +1,10 @@
+2026-08-06 23:08:50,857 - INFO - Successfully connected to Postgres
+2026-08-06 23:08:50,857 - INFO - Connected to Postgres database successfully.
+2026-08-06 23:08:50,862 - INFO - Product cost data read successfully from C:\Users\BhavikG\Data Modeling Project\Source files\Master Product Cost\dim_product_cost.csv.
+2026-08-06 23:08:50,868 - ERROR - Error inserting/updating product cost data: relation "dim_product_cost" does not exist
+LINE 2:             INSERT INTO dim_product_cost (product_id, produc...
+                                ^
+
+2026-08-06 23:08:50,868 - INFO - Inserted None rows into dim_product_cost table.
+2026-08-06 23:08:50,869 - INFO - All chunks processed successfully.
+2026-08-06 23:08:50,869 - INFO - Postgres connection closed.

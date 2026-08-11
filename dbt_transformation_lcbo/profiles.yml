@@ -1,0 +1,12 @@
+dbt_transformation_lcbo:
+  outputs:
+    dev:
+      dbname: postgres
+      host: localhost
+      pass: Bhavik@7573073
+      port: 5432
+      schema: silver
+      threads: 4
+      type: postgres
+      user: postgres
+  target: dev

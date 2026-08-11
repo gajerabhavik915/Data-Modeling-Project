@@ -137,11 +137,6 @@ def build_batch_audit():
 
 
     
-
-     
-
-
-    
     def get_pending_files(conn, source_file_path):
         processed_files_hash = get_processed_files(conn)
         all_files_hash  = get_folder_files(source_file_path)

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: lcbo_project
+    database: postgres
+    schema: bronze
+    tables:
+      - name: pipeline_run_log
+      - name: stg_lcbo_settlement
+      - name: dim_product_cost
