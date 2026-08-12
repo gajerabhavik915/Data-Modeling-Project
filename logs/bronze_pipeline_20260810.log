@@ -1,0 +1,35 @@
+2026-08-10 21:17:30,154 - INFO - Successfully connected to Postgres
+2026-08-10 21:17:30,154 - INFO - Connected to Postgres database successfully.
+2026-08-10 21:17:30,157 - INFO - Product cost data read successfully from C:\Users\BhavikG\Data Modeling Project\Source files\Master Product Cost\dim_product_cost.csv.
+2026-08-10 21:17:30,163 - ERROR - Error inserting/updating product cost data: relation "dim_product_cost" does not exist
+LINE 2:             INSERT INTO dim_product_cost (product_id, produc...
+                                ^
+
+2026-08-10 21:17:30,163 - INFO - Inserted None rows into dim_product_cost table.
+2026-08-10 21:17:30,163 - INFO - All chunks processed successfully.
+2026-08-10 21:17:30,163 - INFO - Postgres connection closed.
+2026-08-10 21:41:30,640 - INFO - Successfully connected to Postgres
+2026-08-10 21:41:30,640 - INFO - Connected to Postgres database successfully.
+2026-08-10 21:41:30,642 - INFO - Product cost data read successfully from C:\Users\BhavikG\Data Modeling Project\Source files\Master Product Cost\dim_product_cost.csv.
+2026-08-10 21:41:30,643 - ERROR - Error truncating table dim_product_cost: relation "dim_product_cost" does not exist
+
+2026-08-10 21:41:30,644 - ERROR - Failed to truncate dim_product_cost table. Creating new table.
+2026-08-10 21:41:30,668 - INFO - dim_product_cost table created successfully.
+2026-08-10 21:41:30,670 - ERROR - Error inserting/updating product cost data: INSERT has more expressions than target columns
+LINE 3: ...2000,'Canadian Club 1858 40% 750mL','Whisky',19.5,'2024-01-0...
+                                                             ^
+
+2026-08-10 21:41:30,670 - INFO - Inserted None rows into dim_product_cost table.
+2026-08-10 21:41:30,670 - INFO - All chunks processed successfully.
+2026-08-10 21:41:30,670 - INFO - Postgres connection closed.
+2026-08-10 21:48:48,665 - INFO - Successfully connected to Postgres
+2026-08-10 21:48:48,665 - INFO - Connected to Postgres database successfully.
+2026-08-10 21:48:48,668 - INFO - Product cost data read successfully from C:\Users\BhavikG\Data Modeling Project\Source files\Master Product Cost\dim_product_cost.csv.
+2026-08-10 21:48:48,668 - ERROR - Error truncating table dim_product_cost: relation "bronze.dim_product_cost" does not exist
+
+2026-08-10 21:48:48,669 - ERROR - Failed to truncate bronze.dim_product_cost table. Creating new table.
+2026-08-10 21:48:48,674 - INFO - dim_product_cost table created successfully.
+2026-08-10 21:48:48,678 - INFO - total records inserted: 9 into bronze.dim_product_cost
+2026-08-10 21:48:48,678 - INFO - Inserted 9 rows into bronze.dim_product_cost table.
+2026-08-10 21:48:48,678 - INFO - All chunks processed successfully.
+2026-08-10 21:48:48,678 - INFO - Postgres connection closed.

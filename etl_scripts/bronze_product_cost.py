@@ -71,11 +71,12 @@ def create_dim_product_cost_table(conn):
     try:
         cursor = conn.cursor()
         create_table_query = """
-            CREATE TABLE IF NOT EXISTS dim_product_cost (
-                product_id INT PRIMARY KEY,
-                product_name VARCHAR(255),
-                product_cost DECIMAL(10, 2),
-                effective_date DATE
+            CREATE TABLE IF NOT EXISTS bronze.dim_product_cost (
+                item_id INT PRIMARY KEY,
+                item_description VARCHAR(255),
+                category VARCHAR(255),
+                cost_per_item DECIMAL(10, 2),
+                cost_effective_date DATE
             )
         """
         cursor.execute(create_table_query)
@@ -86,19 +87,35 @@ def create_dim_product_cost_table(conn):
         conn.rollback()
 
 
+def truncate_table(conn, table_name):
+    try:
+        cursor = conn.cursor()
+        truncate_query = f"TRUNCATE TABLE bronze.{table_name}"
+        cursor.execute(truncate_query)
+        conn.commit()
+        logger.info(f"Table {table_name} truncated successfully.")
+
+        return True  # Return True to indicate successful truncation
+    
+    except Exception as e:
+        logger.error(f"Error truncating table {table_name}: {e}")
+        conn.rollback()
+        return False  # Return False to indicate failure to truncate
 
 # function to insert product cost data into Postgres database into chunks of 5000 records at a time.
 
 def insert_product_cost_data_in_chunks(df, conn):
     try:
         cursor = conn.cursor()
+
+        
         insert_query = """
-            INSERT INTO dim_product_cost (product_id, product_name, product_cost, effective_date)
+            INSERT INTO bronze.dim_product_cost (item_id, item_description, category, cost_per_item, cost_effective_date)
             VALUES %s
         """
         execute_values(cursor, insert_query, df.values.tolist())
         conn.commit()
-        logger.info("total records inserted: %d into dim_product_cost", cursor.rowcount)
+        logger.info("total records inserted: %d into bronze.dim_product_cost", cursor.rowcount)
 
         return cursor.rowcount  # Return the number of rows inserted/updated
     
@@ -122,13 +139,20 @@ def main_loading():
 
     product_cost_df = read_product_cost_data(joined_path)
 
+    empty_table = truncate_table(conn, "dim_product_cost")
+
+    if not empty_table:
+        logger.error("dim_product_cost table not found, creating new table.")
+        create_dim_product_cost_table(conn)
+
+
     # converting product_cost_df to chunks of 5000 records 
     while True:
         try:
             chunks = chunk_dataframe(product_cost_df, int(os.getenv("chunk_size")))
             for chunk in chunks:
                 inserted_rows = insert_product_cost_data_in_chunks(chunk, conn)
-                logger.info(f"Inserted {inserted_rows} rows into dim_product_cost table.")
+                logger.info(f"Inserted {inserted_rows} rows into bronze.dim_product_cost table.")
 
             logger.info("All chunks processed successfully.")
             break  # Exit the loop after processing all chunks
