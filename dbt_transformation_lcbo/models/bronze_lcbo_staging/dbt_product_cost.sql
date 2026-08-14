@@ -1,10 +1,10 @@
 {{
     config(
         materialized='table',
-        schema='bronze'
+        tag='dim_product_table'
     )
 }}
 
 select 
-    distinct(*) 
-from {{ source('lcbo_project', 'stg_product_cost') }}
+    distinct * 
+from {{ source('lcbo_project', 'dim_product_cost') }}
