@@ -11,6 +11,6 @@
     )
 }}
 
-select * from {{ ref('dbt_dim_product_cost_transform') }} as product_cost
+select * from {{ ref('dbt_dim_product_transform') }} as product_cost
 
 {% endsnapshot %}

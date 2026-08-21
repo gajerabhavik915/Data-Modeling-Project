@@ -34,7 +34,7 @@ SELECT Distinct
     settlement.discount_amount,
 
     {{ clean_currency('settlement.net_sales') }} as net_sales,
-    {{ clean_currency('settlement.cost_of_goods_sold') }} as cost_of_goods_sold,
+    {{ clean_currency('settlement.cost_of_goods') }} as cost_of_goods,
     {{ clean_currency('settlement.gross_margin') }} as gross_margin,
 
     settlement.source_file,
