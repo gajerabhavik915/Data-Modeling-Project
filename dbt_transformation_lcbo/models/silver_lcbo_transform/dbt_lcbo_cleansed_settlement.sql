@@ -5,12 +5,11 @@
     )
 }}
 
-select settlement.*,
-    current_timestamp as created_at
+select settlement.*
 from {{ ref('dbt_lcbo_columns_type') }} as settlement
-where settlement.units_sold >= 0
-        or settlement.unit_price >= 0 
-        or settlement.gross_sales >= 0 
-        or settlement.net_sales >= 0 
-        or settlement.cost_of_goods >= 0 
-        or settlement.gross_margin >= 0
+where settlement.units_sold >= 0 
+        and settlement.unit_price >= 0 
+        and settlement.gross_sales >= 0 
+        and settlement.net_sales >= 0 
+        and settlement.cost_of_goods >= 0 
+        and settlement.gross_margin >= 0
