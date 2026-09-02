@@ -26,7 +26,7 @@ select settlement.settlement_id,
 
     prod_cost.cost_per_item as actual_cost_per_item,
 
-    (settlement.units_sold * prod_cost.cost_per_item) as actual_cost_of_goods_sold_total,
+    (settlement.units_sold * prod_cost.cost_per_item) as actual_cost_of_goods,
 
     (settlement.gross_sales - (settlement.units_sold * prod_cost.cost_per_item)) as dim_gross_margin,
 
