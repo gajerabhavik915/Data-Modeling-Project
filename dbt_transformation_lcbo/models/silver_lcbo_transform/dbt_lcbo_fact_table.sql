@@ -40,8 +40,8 @@ on transformed.store_id = store.store_id
   
 left join {{ ref('gold_dim_product_info') }} as product
 on transformed.item_id = product.item_id and
-  transformed.settlement_date >= product.dbt_valid_from and 
-  transformed.settlement_date < coalesce(product.dbt_valid_to, '9999-12-31')
+  transformed.settlement_date >= product.dbt_valid_from::date and 
+  transformed.settlement_date < coalesce(product.dbt_valid_to::date, '9999-12-31')
 
 left join {{ ref('gold_dim_date') }} as dates
 on transformed.settlement_date = dates.date_day

@@ -16,4 +16,4 @@ where settlement.units_sold < 0
         or settlement.gross_sales < 0 
         or settlement.net_sales < 0 
         or settlement.cost_of_goods < 0 
-        or settlement.gross_margin < 0
+        or settlement.gross_margin < 0 

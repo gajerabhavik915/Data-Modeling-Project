@@ -127,7 +127,7 @@ def insert_product_cost_data_in_chunks(df, conn):
 # creating a chuncks of 5000 records from the product cost dataframe 
 
 def chunk_dataframe(df, chunk_size):
-    for start in range(0, len(df), chunk_size):
+    for start in range(0, len(df), chunk_size): 
         yield df.iloc[start:start + chunk_size]
 
 
@@ -143,13 +143,13 @@ def main_loading():
 
     if not empty_table:
         logger.error("dim_product_cost table not found, creating new table.")
-        create_dim_product_cost_table(conn)
+        create_dim_product_cost_table(conn) 
 
 
     # converting product_cost_df to chunks of 5000 records 
     while True:
         try:
-            chunks = chunk_dataframe(product_cost_df, int(os.getenv("chunk_size")))
+            chunks = chunk_dataframe(product_cost_df, int(os.getenv("chunk_size", "1000")))
             for chunk in chunks:
                 inserted_rows = insert_product_cost_data_in_chunks(chunk, conn)
                 logger.info(f"Inserted {inserted_rows} rows into bronze.dim_product_cost table.")

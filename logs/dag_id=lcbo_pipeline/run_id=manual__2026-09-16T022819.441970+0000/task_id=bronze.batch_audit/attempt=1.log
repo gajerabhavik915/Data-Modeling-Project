@@ -1,0 +1,41 @@
+[2026-09-16T02:28:20.437+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-16T02:28:20.501+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-16T02:28:19.441970+00:00 [queued]>
+[2026-09-16T02:28:20.509+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-16T02:28:19.441970+00:00 [queued]>
+[2026-09-16T02:28:20.510+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-16T02:28:20.523+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): bronze.batch_audit> on 2026-09-16 02:28:19.441970+00:00
+[2026-09-16T02:28:20.534+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'bronze.batch_audit', 'manual__2026-09-16T02:28:19.441970+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpgafrc_7u']
+[2026-09-16T02:28:20.536+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=3477) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-16T02:28:20.537+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask bronze.batch_audit
+[2026-09-16T02:28:20.538+0000] {standard_task_runner.py:64} INFO - Started process 3478 to run task
+[2026-09-16T02:28:20.582+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-16T02:28:19.441970+00:00 [running]> on host a3117db37323
+[2026-09-16T02:28:20.662+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='bronze.batch_audit' AIRFLOW_CTX_EXECUTION_DATE='2026-09-16T02:28:19.441970+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-16T02:28:19.441970+00:00'
+[2026-09-16T02:28:20.664+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-16T02:28:20.709+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-16T02:28:20.712+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_batch_audit.py']
+[2026-09-16T02:28:20.728+0000] {subprocess.py:86} INFO - Output:
+[2026-09-16T02:28:21.073+0000] {subprocess.py:93} INFO - 2026-09-16 02:28:21,073 - ERROR - Error connecting to Postgres: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+[2026-09-16T02:28:21.074+0000] {subprocess.py:93} INFO - 	Is the server running locally and accepting connections on that socket?
+[2026-09-16T02:28:21.075+0000] {subprocess.py:93} INFO - 
+[2026-09-16T02:28:21.076+0000] {subprocess.py:93} INFO - 2026-09-16 02:28:21,073 - ERROR - Batch audit failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+[2026-09-16T02:28:21.077+0000] {subprocess.py:93} INFO - 	Is the server running locally and accepting connections on that socket?
+[2026-09-16T02:28:21.078+0000] {subprocess.py:93} INFO - 
+[2026-09-16T02:28:21.086+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-09-16T02:28:21.088+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-16T02:28:21.097+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-09-16T02:28:21.103+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=lcbo_pipeline, task_id=bronze.batch_audit, run_id=manual__2026-09-16T02:28:19.441970+00:00, execution_date=20260916T022819, start_date=20260916T022820, end_date=20260916T022821
+[2026-09-16T02:28:21.115+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 11 for task bronze.batch_audit (Bash command failed. The command returned a non-zero exit code 1.; 3478)
+[2026-09-16T02:28:21.155+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-09-16T02:28:21.164+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

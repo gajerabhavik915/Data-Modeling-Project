@@ -1,0 +1,30 @@
+[2026-09-19T20:56:27.124+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-19T20:56:27.162+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-19T20:56:26.339927+00:00 [queued]>
+[2026-09-19T20:56:27.168+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-19T20:56:26.339927+00:00 [queued]>
+[2026-09-19T20:56:27.170+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-19T20:56:27.181+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): bronze.batch_audit> on 2026-09-19 20:56:26.339927+00:00
+[2026-09-19T20:56:27.191+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'bronze.batch_audit', 'manual__2026-09-19T20:56:26.339927+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpok5glmpt']
+[2026-09-19T20:56:27.193+0000] {standard_task_runner.py:91} INFO - Job 76: Subtask bronze.batch_audit
+[2026-09-19T20:56:27.193+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2696) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-19T20:56:27.194+0000] {standard_task_runner.py:64} INFO - Started process 2697 to run task
+[2026-09-19T20:56:27.228+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.bronze.batch_audit manual__2026-09-19T20:56:26.339927+00:00 [running]> on host 6cf516ec3c07
+[2026-09-19T20:56:27.299+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='bronze.batch_audit' AIRFLOW_CTX_EXECUTION_DATE='2026-09-19T20:56:26.339927+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-19T20:56:26.339927+00:00'
+[2026-09-19T20:56:27.302+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-19T20:56:27.321+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-19T20:56:27.323+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_batch_audit.py']
+[2026-09-19T20:56:27.337+0000] {subprocess.py:86} INFO - Output:
+[2026-09-19T20:56:27.695+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,694 - INFO - Successfully connected to Postgres
+[2026-09-19T20:56:27.699+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,699 - INFO - Found 2 already processed files in DB
+[2026-09-19T20:56:27.712+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,712 - INFO - Found 3 files in folder /opt/***/source_files
+[2026-09-19T20:56:27.713+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,712 - INFO - Pending files to process: ['8ddf3f8eca2dd916750f7218de9933e4171dc4bb17e91d63893d9acce8df3acd', 'dee0139b317a64cac5a6e261c09b3010bd767f35bf556ae45681929267665db6']
+[2026-09-19T20:56:27.714+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,712 - INFO - 2 new file(s) to process: ['8ddf3f8eca2dd916750f7218de9933e4171dc4bb17e91d63893d9acce8df3acd', 'dee0139b317a64cac5a6e261c09b3010bd767f35bf556ae45681929267665db6']
+[2026-09-19T20:56:27.715+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,712 - INFO - Started with 8ddf3f8eca2dd916750f7218de9933e4171dc4bb17e91d63893d9acce8df3acd
+[2026-09-19T20:56:27.716+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,716 - INFO - Created new batch with run_id 3 for lcbo_settlement_20240102.csv at 2026-09-19 20:56:27.712803
+[2026-09-19T20:56:27.717+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,716 - INFO - Postgres connection closed.
+[2026-09-19T20:56:27.717+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:27,716 - INFO - batch audit result: {'batch_created': True, 'batch_id': 3, 'related_date': datetime.datetime(2026, 9, 19, 20, 56, 27, 712803), 'file_hash': '8ddf3f8eca2dd916750f7218de9933e4171dc4bb17e91d63893d9acce8df3acd', 'all_processed_files': False}
+[2026-09-19T20:56:27.728+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-19T20:56:27.730+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-19T20:56:27.751+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=bronze.batch_audit, run_id=manual__2026-09-19T20:56:26.339927+00:00, execution_date=20260919T205626, start_date=20260919T205627, end_date=20260919T205627
+[2026-09-19T20:56:27.769+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-19T20:56:27.789+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-19T20:56:27.792+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

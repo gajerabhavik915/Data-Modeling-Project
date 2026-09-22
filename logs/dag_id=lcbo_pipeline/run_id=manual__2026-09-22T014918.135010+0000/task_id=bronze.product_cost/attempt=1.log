@@ -1,0 +1,29 @@
+[2026-09-22T01:49:23.421+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-22T01:49:23.447+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.product_cost manual__2026-09-22T01:49:18.135010+00:00 [queued]>
+[2026-09-22T01:49:23.454+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.product_cost manual__2026-09-22T01:49:18.135010+00:00 [queued]>
+[2026-09-22T01:49:23.455+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-22T01:49:23.466+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): bronze.product_cost> on 2026-09-22 01:49:18.135010+00:00
+[2026-09-22T01:49:23.475+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'bronze.product_cost', 'manual__2026-09-22T01:49:18.135010+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpjy96cro2']
+[2026-09-22T01:49:23.477+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1250) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-22T01:49:23.477+0000] {standard_task_runner.py:91} INFO - Job 111: Subtask bronze.product_cost
+[2026-09-22T01:49:23.478+0000] {standard_task_runner.py:64} INFO - Started process 1251 to run task
+[2026-09-22T01:49:23.514+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.bronze.product_cost manual__2026-09-22T01:49:18.135010+00:00 [running]> on host d8c458fd86ee
+[2026-09-22T01:49:23.581+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='bronze.product_cost' AIRFLOW_CTX_EXECUTION_DATE='2026-09-22T01:49:18.135010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-22T01:49:18.135010+00:00'
+[2026-09-22T01:49:23.582+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-22T01:49:23.592+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-22T01:49:23.594+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_product_cost.py']
+[2026-09-22T01:49:23.606+0000] {subprocess.py:86} INFO - Output:
+[2026-09-22T01:49:24.330+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,329 - INFO - Successfully connected to Postgres
+[2026-09-22T01:49:24.331+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,330 - INFO - Connected to Postgres database successfully.
+[2026-09-22T01:49:24.335+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,335 - INFO - Product cost data read successfully from /opt/***/source_files/Master Product Cost/dim_product_cost.csv.
+[2026-09-22T01:49:24.342+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,342 - INFO - Table dim_product_cost truncated successfully.
+[2026-09-22T01:49:24.346+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,346 - INFO - total records inserted: 9 into bronze.dim_product_cost
+[2026-09-22T01:49:24.347+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,346 - INFO - Inserted 9 rows into bronze.dim_product_cost table.
+[2026-09-22T01:49:24.348+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,346 - INFO - All chunks processed successfully.
+[2026-09-22T01:49:24.349+0000] {subprocess.py:93} INFO - 2026-09-22 01:49:24,346 - INFO - Postgres connection closed.
+[2026-09-22T01:49:24.422+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-22T01:49:24.423+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-22T01:49:24.441+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=bronze.product_cost, run_id=manual__2026-09-22T01:49:18.135010+00:00, execution_date=20260922T014918, start_date=20260922T014923, end_date=20260922T014924
+[2026-09-22T01:49:24.495+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-22T01:49:24.522+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-22T01:49:24.525+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

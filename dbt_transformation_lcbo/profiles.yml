@@ -1,12 +1,21 @@
 dbt_transformation_lcbo:
+  target: dev
   outputs:
-    dev:
-      dbname: postgres
+    dev:                          # your existing local target — leave as is
+      type: postgres
       host: localhost
-      pass: Bhavik@7573073
       port: 5432
+      user: postgres
+      pass: Bhavik@7573073
+      dbname: postgres
       schema: silver
       threads: 4
+    docker:                       # THIS is for running inside the container
       type: postgres
+      host: host.docker.internal
+      port: 5432
       user: postgres
-  target: dev
+      pass: Bhavik@7573073
+      dbname: postgres
+      schema: silver
+      threads: 4

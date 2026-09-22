@@ -1,0 +1,12 @@
+dbt_transformation_lcbo:
+  target: docker
+  outputs:
+    docker:
+      type: postgres
+      host: host.docker.internal    # reaches your Windows host's Postgres from inside the container
+      port: 5432                    # your existing local Postgres port
+      user: postgres               # your existing local DB user
+      pass: Bhavik@7573073            # your existing local DB password
+      dbname: postgres         # your existing local database name
+      schema: silver
+      threads: 4

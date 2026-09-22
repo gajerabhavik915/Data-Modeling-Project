@@ -1,0 +1,35 @@
+[2026-09-19T20:04:24.736+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-19T20:04:24.764+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.silver.run_joined manual__2026-09-19T20:03:59.887522+00:00 [queued]>
+[2026-09-19T20:04:24.771+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.silver.run_joined manual__2026-09-19T20:03:59.887522+00:00 [queued]>
+[2026-09-19T20:04:24.772+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-19T20:04:24.782+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): silver.run_joined> on 2026-09-19 20:03:59.887522+00:00
+[2026-09-19T20:04:24.791+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'silver.run_joined', 'manual__2026-09-19T20:03:59.887522+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmp1tu4qynh']
+[2026-09-19T20:04:24.794+0000] {standard_task_runner.py:91} INFO - Job 57: Subtask silver.run_joined
+[2026-09-19T20:04:24.793+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1269) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-19T20:04:24.795+0000] {standard_task_runner.py:64} INFO - Started process 1270 to run task
+[2026-09-19T20:04:24.830+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.silver.run_joined manual__2026-09-19T20:03:59.887522+00:00 [running]> on host 6cf516ec3c07
+[2026-09-19T20:04:24.896+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='silver.run_joined' AIRFLOW_CTX_EXECUTION_DATE='2026-09-19T20:03:59.887522+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-19T20:03:59.887522+00:00'
+[2026-09-19T20:04:24.898+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-19T20:04:24.909+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-19T20:04:24.910+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select dbt_lcbo_joined_dim_prod_cost']
+[2026-09-19T20:04:24.923+0000] {subprocess.py:86} INFO - Output:
+[2026-09-19T20:04:26.479+0000] {subprocess.py:93} INFO - [0m20:04:26  Running with dbt=1.12.5
+[2026-09-19T20:04:26.710+0000] {subprocess.py:93} INFO - [0m20:04:26  Registered adapter: postgres=1.9.0
+[2026-09-19T20:04:27.823+0000] {subprocess.py:93} INFO - [0m20:04:27  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-19T20:04:27.827+0000] {subprocess.py:93} INFO - [0m20:04:27
+[2026-09-19T20:04:27.829+0000] {subprocess.py:93} INFO - [0m20:04:27  Concurrency: 4 threads (target='docker')
+[2026-09-19T20:04:27.830+0000] {subprocess.py:93} INFO - [0m20:04:27
+[2026-09-19T20:04:28.122+0000] {subprocess.py:93} INFO - [0m20:04:28  1 of 1 START sql table model silver.dbt_lcbo_joined_dim_prod_cost .............. [RUN]
+[2026-09-19T20:04:28.315+0000] {subprocess.py:93} INFO - [0m20:04:28  1 of 1 OK created sql table model silver.dbt_lcbo_joined_dim_prod_cost ......... [[32mSELECT 14[0m in 0.18s]
+[2026-09-19T20:04:28.391+0000] {subprocess.py:93} INFO - [0m20:04:28
+[2026-09-19T20:04:28.392+0000] {subprocess.py:93} INFO - [0m20:04:28  Finished running 1 table model in 0 hours 0 minutes and 0.56 seconds (0.56s).
+[2026-09-19T20:04:28.580+0000] {subprocess.py:93} INFO - [0m20:04:28
+[2026-09-19T20:04:28.582+0000] {subprocess.py:93} INFO - [0m20:04:28  [32mCompleted successfully[0m
+[2026-09-19T20:04:28.583+0000] {subprocess.py:93} INFO - [0m20:04:28
+[2026-09-19T20:04:28.584+0000] {subprocess.py:93} INFO - [0m20:04:28  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[2026-09-19T20:04:32.337+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-19T20:04:32.339+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-19T20:04:32.357+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=silver.run_joined, run_id=manual__2026-09-19T20:03:59.887522+00:00, execution_date=20260919T200359, start_date=20260919T200424, end_date=20260919T200432
+[2026-09-19T20:04:32.397+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-19T20:04:32.416+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-19T20:04:32.419+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

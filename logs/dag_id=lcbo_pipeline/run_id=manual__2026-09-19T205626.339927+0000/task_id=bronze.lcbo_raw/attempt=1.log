@@ -1,0 +1,29 @@
+[2026-09-19T20:56:27.983+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-19T20:56:28.010+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.lcbo_raw manual__2026-09-19T20:56:26.339927+00:00 [queued]>
+[2026-09-19T20:56:28.017+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.bronze.lcbo_raw manual__2026-09-19T20:56:26.339927+00:00 [queued]>
+[2026-09-19T20:56:28.018+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-19T20:56:28.027+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): bronze.lcbo_raw> on 2026-09-19 20:56:26.339927+00:00
+[2026-09-19T20:56:28.036+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'bronze.lcbo_raw', 'manual__2026-09-19T20:56:26.339927+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpello0tok']
+[2026-09-19T20:56:28.038+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2699) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-19T20:56:28.038+0000] {standard_task_runner.py:91} INFO - Job 77: Subtask bronze.lcbo_raw
+[2026-09-19T20:56:28.039+0000] {standard_task_runner.py:64} INFO - Started process 2700 to run task
+[2026-09-19T20:56:28.075+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.bronze.lcbo_raw manual__2026-09-19T20:56:26.339927+00:00 [running]> on host 6cf516ec3c07
+[2026-09-19T20:56:28.139+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='bronze.lcbo_raw' AIRFLOW_CTX_EXECUTION_DATE='2026-09-19T20:56:26.339927+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-19T20:56:26.339927+00:00'
+[2026-09-19T20:56:28.140+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-19T20:56:28.150+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-19T20:56:28.152+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_lcbo_raw.py']
+[2026-09-19T20:56:28.165+0000] {subprocess.py:86} INFO - Output:
+[2026-09-19T20:56:29.187+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,187 - INFO - Successfully connected to Postgres
+[2026-09-19T20:56:29.188+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,187 - INFO - Successfully connected to Postgres
+[2026-09-19T20:56:29.189+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,187 - INFO - LoadingData_ToPostgres class initialized successfully.
+[2026-09-19T20:56:29.191+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,191 - INFO - Processing file: lcbo_settlement_20240102.csv with batch ID: 3 and file hash: 8ddf3f8eca2dd916750f7218de9933e4171dc4bb17e91d63893d9acce8df3acd
+[2026-09-19T20:56:29.192+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,191 - INFO - Found file: /opt/***/source_files/lcbo_settlement_20240102.csv
+[2026-09-19T20:56:29.204+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,203 - INFO - Inserted batch of size 15 into Postgres.
+[2026-09-19T20:56:29.205+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,205 - INFO - File processed successfully.
+[2026-09-19T20:56:29.206+0000] {subprocess.py:93} INFO - 2026-09-19 20:56:29,206 - INFO - Postgres connection closed.
+[2026-09-19T20:56:29.294+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-19T20:56:29.295+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-19T20:56:29.314+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=bronze.lcbo_raw, run_id=manual__2026-09-19T20:56:26.339927+00:00, execution_date=20260919T205626, start_date=20260919T205628, end_date=20260919T205629
+[2026-09-19T20:56:29.336+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-19T20:56:29.359+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-19T20:56:29.361+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

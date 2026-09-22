@@ -9,6 +9,8 @@ case
         then to_date(trim({{ column }}), 'MM/DD/YYYY')
     when trim({{ column }}) ~ '^\d{1,2}-[A-Za-z]{3}-\d{4}$'
         then to_date(trim({{ column }}), 'DD-Mon-YYYY')
+    when trim({{ column }}) ~ '^\d{1,2}-[A-Za-z]{3}-\d{4}$'
+        then to_date(trim({{ column }}), 'DD-Mon-YY')
     else null
 end
 

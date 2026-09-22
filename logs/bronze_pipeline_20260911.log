@@ -1,0 +1,13 @@
+2026-09-11 21:42:23,528 - INFO - Successfully connected to Postgres
+2026-09-11 21:42:23,528 - INFO - Successfully connected to Postgres
+2026-09-11 21:42:23,528 - INFO - LoadingData_ToPostgres class initialized successfully.
+2026-09-11 21:42:23,529 - INFO - Data from file lcbo_settlement_20240103.csv already exists in Postgres. Skipping processing.
+2026-09-11 21:42:23,531 - INFO - Postgres connection closed.
+2026-09-11 21:43:07,865 - INFO - Successfully connected to Postgres
+2026-09-11 21:43:07,866 - INFO - Connected to Postgres database successfully.
+2026-09-11 21:43:07,868 - INFO - Product cost data read successfully from C:\Users\BhavikG\Data Modeling Project\Source files\Master Product Cost\dim_product_cost.csv.
+2026-09-11 21:43:07,874 - INFO - Table dim_product_cost truncated successfully.
+2026-09-11 21:43:07,876 - INFO - total records inserted: 9 into bronze.dim_product_cost
+2026-09-11 21:43:07,876 - INFO - Inserted 9 rows into bronze.dim_product_cost table.
+2026-09-11 21:43:07,876 - INFO - All chunks processed successfully.
+2026-09-11 21:43:07,876 - INFO - Postgres connection closed.

@@ -1,0 +1,45 @@
+[2026-09-19T20:32:57.703+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-19T20:32:57.728+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.gold.run_gold manual__2026-09-19T20:32:17.784588+00:00 [queued]>
+[2026-09-19T20:32:57.735+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.gold.run_gold manual__2026-09-19T20:32:17.784588+00:00 [queued]>
+[2026-09-19T20:32:57.736+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-19T20:32:57.746+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): gold.run_gold> on 2026-09-19 20:32:17.784588+00:00
+[2026-09-19T20:32:57.757+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2038) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-19T20:32:57.755+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'gold.run_gold', 'manual__2026-09-19T20:32:17.784588+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpjry5549c']
+[2026-09-19T20:32:57.759+0000] {standard_task_runner.py:64} INFO - Started process 2039 to run task
+[2026-09-19T20:32:57.759+0000] {standard_task_runner.py:91} INFO - Job 67: Subtask gold.run_gold
+[2026-09-19T20:32:57.799+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.gold.run_gold manual__2026-09-19T20:32:17.784588+00:00 [running]> on host 6cf516ec3c07
+[2026-09-19T20:32:57.876+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='gold.run_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-09-19T20:32:17.784588+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-19T20:32:17.784588+00:00'
+[2026-09-19T20:32:57.877+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-19T20:32:57.888+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-19T20:32:57.890+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select gold_dim_date gold_dim_product_cost gold_dim_product_info gold_dim_store dbt_lcbo_fact_table gold_fact_table']
+[2026-09-19T20:32:57.903+0000] {subprocess.py:86} INFO - Output:
+[2026-09-19T20:32:59.427+0000] {subprocess.py:93} INFO - [0m20:32:59  Running with dbt=1.12.5
+[2026-09-19T20:32:59.654+0000] {subprocess.py:93} INFO - [0m20:32:59  Registered adapter: postgres=1.9.0
+[2026-09-19T20:33:00.775+0000] {subprocess.py:93} INFO - [0m20:33:00  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-19T20:33:00.781+0000] {subprocess.py:93} INFO - [0m20:33:00
+[2026-09-19T20:33:00.783+0000] {subprocess.py:93} INFO - [0m20:33:00  Concurrency: 4 threads (target='docker')
+[2026-09-19T20:33:00.784+0000] {subprocess.py:93} INFO - [0m20:33:00
+[2026-09-19T20:33:01.191+0000] {subprocess.py:93} INFO - [0m20:33:01  1 of 6 START sql table model gold.gold_dim_date ................................ [RUN]
+[2026-09-19T20:33:01.192+0000] {subprocess.py:93} INFO - [0m20:33:01  2 of 6 START sql table model gold.gold_dim_product_cost ........................ [RUN]
+[2026-09-19T20:33:01.193+0000] {subprocess.py:93} INFO - [0m20:33:01  3 of 6 START sql table model gold.gold_dim_product_info ........................ [RUN]
+[2026-09-19T20:33:01.195+0000] {subprocess.py:93} INFO - [0m20:33:01  4 of 6 START sql table model gold.gold_dim_store ............................... [RUN]
+[2026-09-19T20:33:01.573+0000] {subprocess.py:93} INFO - [0m20:33:01  4 of 6 OK created sql table model gold.gold_dim_store .......................... [[32mSELECT 0[0m in 0.37s]
+[2026-09-19T20:33:01.579+0000] {subprocess.py:93} INFO - [0m20:33:01  2 of 6 OK created sql table model gold.gold_dim_product_cost ................... [[32mSELECT 0[0m in 0.37s]
+[2026-09-19T20:33:01.589+0000] {subprocess.py:93} INFO - [0m20:33:01  1 of 6 OK created sql table model gold.gold_dim_date ........................... [[32mSELECT 3653[0m in 0.39s]
+[2026-09-19T20:33:01.611+0000] {subprocess.py:93} INFO - [0m20:33:01  3 of 6 OK created sql table model gold.gold_dim_product_info ................... [[32mSELECT 10[0m in 0.41s]
+[2026-09-19T20:33:01.616+0000] {subprocess.py:93} INFO - [0m20:33:01  5 of 6 START sql table model silver.dbt_lcbo_fact_table ........................ [RUN]
+[2026-09-19T20:33:01.782+0000] {subprocess.py:93} INFO - [0m20:33:01  5 of 6 OK created sql table model silver.dbt_lcbo_fact_table ................... [[32mSELECT 0[0m in 0.16s]
+[2026-09-19T20:33:01.790+0000] {subprocess.py:93} INFO - [0m20:33:01  6 of 6 START sql incremental model gold.gold_fact_table ........................ [RUN]
+[2026-09-19T20:33:02.047+0000] {subprocess.py:93} INFO - [0m20:33:02  6 of 6 OK created sql incremental model gold.gold_fact_table ................... [[32mMERGE 0[0m in 0.25s]
+[2026-09-19T20:33:02.128+0000] {subprocess.py:93} INFO - [0m20:33:02
+[2026-09-19T20:33:02.130+0000] {subprocess.py:93} INFO - [0m20:33:02  Finished running 1 incremental model, 5 table models in 0 hours 0 minutes and 1.34 seconds (1.34s).
+[2026-09-19T20:33:02.240+0000] {subprocess.py:93} INFO - [0m20:33:02
+[2026-09-19T20:33:02.242+0000] {subprocess.py:93} INFO - [0m20:33:02  [32mCompleted successfully[0m
+[2026-09-19T20:33:02.243+0000] {subprocess.py:93} INFO - [0m20:33:02
+[2026-09-19T20:33:02.244+0000] {subprocess.py:93} INFO - [0m20:33:02  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[2026-09-19T20:33:06.147+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-19T20:33:06.149+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-19T20:33:06.171+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=gold.run_gold, run_id=manual__2026-09-19T20:32:17.784588+00:00, execution_date=20260919T203217, start_date=20260919T203257, end_date=20260919T203306
+[2026-09-19T20:33:06.206+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-19T20:33:06.221+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-19T20:33:06.224+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

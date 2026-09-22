@@ -1,0 +1,35 @@
+[2026-09-19T20:32:49.753+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-19T20:32:49.780+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lcbo_pipeline.silver.snapshot_product manual__2026-09-19T20:32:17.784588+00:00 [queued]>
+[2026-09-19T20:32:49.787+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lcbo_pipeline.silver.snapshot_product manual__2026-09-19T20:32:17.784588+00:00 [queued]>
+[2026-09-19T20:32:49.788+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-19T20:32:49.798+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): silver.snapshot_product> on 2026-09-19 20:32:17.784588+00:00
+[2026-09-19T20:32:49.808+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'lcbo_pipeline', 'silver.snapshot_product', 'manual__2026-09-19T20:32:17.784588+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmply2thdej']
+[2026-09-19T20:32:49.809+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2023) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-19T20:32:49.810+0000] {standard_task_runner.py:91} INFO - Job 66: Subtask silver.snapshot_product
+[2026-09-19T20:32:49.811+0000] {standard_task_runner.py:64} INFO - Started process 2024 to run task
+[2026-09-19T20:32:49.845+0000] {task_command.py:426} INFO - Running <TaskInstance: lcbo_pipeline.silver.snapshot_product manual__2026-09-19T20:32:17.784588+00:00 [running]> on host 6cf516ec3c07
+[2026-09-19T20:32:49.912+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='lcbo_pipeline' AIRFLOW_CTX_TASK_ID='silver.snapshot_product' AIRFLOW_CTX_EXECUTION_DATE='2026-09-19T20:32:17.784588+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-19T20:32:17.784588+00:00'
+[2026-09-19T20:32:49.914+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-19T20:32:49.924+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-19T20:32:49.926+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt snapshot --target docker --select dim_product_snapshot']
+[2026-09-19T20:32:49.938+0000] {subprocess.py:86} INFO - Output:
+[2026-09-19T20:32:51.398+0000] {subprocess.py:93} INFO - [0m20:32:51  Running with dbt=1.12.5
+[2026-09-19T20:32:51.628+0000] {subprocess.py:93} INFO - [0m20:32:51  Registered adapter: postgres=1.9.0
+[2026-09-19T20:32:52.749+0000] {subprocess.py:93} INFO - [0m20:32:52  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-19T20:32:52.752+0000] {subprocess.py:93} INFO - [0m20:32:52
+[2026-09-19T20:32:52.754+0000] {subprocess.py:93} INFO - [0m20:32:52  Concurrency: 4 threads (target='docker')
+[2026-09-19T20:32:52.755+0000] {subprocess.py:93} INFO - [0m20:32:52
+[2026-09-19T20:32:53.054+0000] {subprocess.py:93} INFO - [0m20:32:53  1 of 1 START snapshot gold.dim_product_snapshot ................................ [RUN]
+[2026-09-19T20:32:53.423+0000] {subprocess.py:93} INFO - [0m20:32:53  1 of 1 OK snapshotted gold.dim_product_snapshot ................................ [[32mINSERT 0 0[0m in 0.37s]
+[2026-09-19T20:32:53.495+0000] {subprocess.py:93} INFO - [0m20:32:53
+[2026-09-19T20:32:53.496+0000] {subprocess.py:93} INFO - [0m20:32:53  Finished running 1 snapshot in 0 hours 0 minutes and 0.74 seconds (0.74s).
+[2026-09-19T20:32:53.606+0000] {subprocess.py:93} INFO - [0m20:32:53
+[2026-09-19T20:32:53.607+0000] {subprocess.py:93} INFO - [0m20:32:53  [32mCompleted successfully[0m
+[2026-09-19T20:32:53.608+0000] {subprocess.py:93} INFO - [0m20:32:53
+[2026-09-19T20:32:53.610+0000] {subprocess.py:93} INFO - [0m20:32:53  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[2026-09-19T20:32:57.360+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-19T20:32:57.362+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-19T20:32:57.382+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lcbo_pipeline, task_id=silver.snapshot_product, run_id=manual__2026-09-19T20:32:17.784588+00:00, execution_date=20260919T203217, start_date=20260919T203249, end_date=20260919T203257
+[2026-09-19T20:32:57.410+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-19T20:32:57.426+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-19T20:32:57.429+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
