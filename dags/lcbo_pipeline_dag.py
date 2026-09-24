@@ -15,7 +15,7 @@ from airflow.operators.bash import BashOperator  # type: ignore[reportMissingImp
 from airflow.utils.task_group import TaskGroup  # type: ignore[reportMissingImports]
 from datetime import datetime
 from airflow.models import Variable
-from dotenv.variables import Variable
+
 
 # --- shared command prefixes -------------------------------------------------
 # These are the paths INSIDE the Airflow container (from the volume mounts).

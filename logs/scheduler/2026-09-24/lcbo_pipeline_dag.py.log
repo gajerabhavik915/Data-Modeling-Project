@@ -1,0 +1,161 @@
+[2026-09-24T00:05:48.916+0000] {processor.py:161} INFO - Started process (PID=179) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:05:48.918+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:05:48.920+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:05:48.919+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:05:48.964+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:05:49.230+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:05:49.229+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:05:49.242+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:05:49.242+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:05:49.260+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.348 seconds
+[2026-09-24T00:06:19.456+0000] {processor.py:161} INFO - Started process (PID=196) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:19.457+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:06:19.459+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:19.459+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:19.495+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:19.515+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:19.515+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:06:19.526+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:19.526+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:06:19.543+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.092 seconds
+[2026-09-24T00:06:49.645+0000] {processor.py:161} INFO - Started process (PID=207) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:49.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:06:49.649+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:49.648+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:49.683+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:06:49.704+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:49.704+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:06:49.717+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:06:49.716+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:06:49.735+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.094 seconds
+[2026-09-24T00:07:19.914+0000] {processor.py:161} INFO - Started process (PID=218) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:19.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:07:19.917+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:19.916+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:19.951+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:19.969+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:19.969+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:07:19.980+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:19.979+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:07:19.998+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.088 seconds
+[2026-09-24T00:07:50.123+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:50.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:07:50.126+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:50.126+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:50.159+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:07:50.175+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:50.175+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:07:50.185+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:07:50.185+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:07:50.202+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.084 seconds
+[2026-09-24T00:08:20.390+0000] {processor.py:161} INFO - Started process (PID=240) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:20.391+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:08:20.393+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:20.393+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:20.420+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:20.435+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:20.435+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:08:20.445+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:20.444+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:08:20.461+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.075 seconds
+[2026-09-24T00:08:50.627+0000] {processor.py:161} INFO - Started process (PID=251) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:50.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:08:50.630+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:50.629+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:50.657+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:08:50.671+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:50.671+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:08:50.680+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:08:50.680+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:08:50.697+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.074 seconds
+[2026-09-24T00:09:20.877+0000] {processor.py:161} INFO - Started process (PID=262) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:20.878+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:09:20.879+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:20.879+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:20.907+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:20.922+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:20.921+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:09:20.930+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:20.930+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:09:20.944+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.071 seconds
+[2026-09-24T00:09:51.104+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:51.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:09:51.107+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:51.106+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:51.136+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:09:51.150+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:51.150+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:09:51.159+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:09:51.159+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:09:51.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.074 seconds
+[2026-09-24T00:10:21.327+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:21.328+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:10:21.329+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:21.329+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:21.361+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:21.378+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:21.378+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:10:21.388+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:21.388+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:10:21.405+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.082 seconds
+[2026-09-24T00:10:51.610+0000] {processor.py:161} INFO - Started process (PID=295) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:51.611+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:10:51.613+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:51.612+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:51.644+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:10:51.660+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:51.660+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:10:51.670+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:10:51.670+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:10:51.686+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.080 seconds
+[2026-09-24T00:11:21.839+0000] {processor.py:161} INFO - Started process (PID=306) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:21.840+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:11:21.842+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:21.841+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:21.873+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:21.890+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:21.890+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:11:21.899+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:21.899+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:11:21.915+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.080 seconds
+[2026-09-24T00:11:52.094+0000] {processor.py:161} INFO - Started process (PID=317) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:52.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:11:52.096+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:52.096+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:52.126+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:11:52.142+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:52.142+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:11:52.152+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:11:52.152+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:11:52.166+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.076 seconds
+[2026-09-24T00:12:22.322+0000] {processor.py:161} INFO - Started process (PID=328) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:22.324+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:12:22.325+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:22.325+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:22.364+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:22.382+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:22.382+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:12:22.394+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:22.394+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:12:22.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.093 seconds
+[2026-09-24T00:12:52.563+0000] {processor.py:161} INFO - Started process (PID=339) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:52.564+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:12:52.565+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:52.565+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:52.595+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:12:52.611+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:52.611+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:12:52.620+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:12:52.620+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:12:52.639+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.080 seconds
+[2026-09-24T00:13:22.776+0000] {processor.py:161} INFO - Started process (PID=350) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:22.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:13:22.779+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:22.779+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:22.808+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:22.824+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:22.824+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:13:22.835+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:22.835+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:13:22.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.079 seconds
+[2026-09-24T00:13:52.987+0000] {processor.py:161} INFO - Started process (PID=361) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:52.988+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:13:52.990+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:52.990+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:53.023+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:13:53.040+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:53.040+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:13:53.049+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:13:53.049+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:13:53.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.084 seconds
+[2026-09-24T00:14:23.201+0000] {processor.py:161} INFO - Started process (PID=372) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:23.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:14:23.204+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:23.203+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:23.232+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:23.247+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:23.247+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:14:23.258+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:23.258+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:14:23.274+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.076 seconds
+[2026-09-24T00:14:53.448+0000] {processor.py:161} INFO - Started process (PID=383) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:53.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:14:53.451+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:53.450+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:53.483+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:14:53.501+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:53.501+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:14:53.511+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:14:53.510+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:14:53.525+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.081 seconds
+[2026-09-24T00:15:23.672+0000] {processor.py:161} INFO - Started process (PID=394) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:23.674+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:15:23.675+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:23.675+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:23.705+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:23.720+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:23.720+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:15:23.729+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:23.728+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:15:23.744+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.076 seconds
+[2026-09-24T00:15:53.940+0000] {processor.py:161} INFO - Started process (PID=405) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:53.941+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:15:53.942+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:53.942+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:53.972+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:15:53.988+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:53.987+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:15:53.998+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:15:53.998+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:15:54.014+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.077 seconds
+[2026-09-24T00:16:24.136+0000] {processor.py:161} INFO - Started process (PID=416) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:24.137+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:16:24.139+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:24.138+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:24.175+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:24.198+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:24.197+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:16:24.207+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:24.207+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:16:24.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.091 seconds
+[2026-09-24T00:16:54.390+0000] {processor.py:161} INFO - Started process (PID=427) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:54.391+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-24T00:16:54.392+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:54.392+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:54.422+0000] {processor.py:840} INFO - DAG(s) 'medallion_settlement_pipeline' retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-24T00:16:54.438+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:54.438+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-09-24T00:16:54.448+0000] {logging_mixin.py:188} INFO - [2026-09-24T00:16:54.448+0000] {dag.py:3947} INFO - Setting next_dagrun for medallion_settlement_pipeline to None, run_after=None
+[2026-09-24T00:16:54.463+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.077 seconds

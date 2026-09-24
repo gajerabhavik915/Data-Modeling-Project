@@ -1,0 +1,45 @@
+[2026-09-23T00:39:21.223+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-23T00:39:21.251+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-23T00:38:38.620355+00:00 [queued]>
+[2026-09-23T00:39:21.259+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-23T00:38:38.620355+00:00 [queued]>
+[2026-09-23T00:39:21.261+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-23T00:39:21.270+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Gold_Star_Schema.build_dims_and_fact> on 2026-09-23 00:38:38.620355+00:00
+[2026-09-23T00:39:21.278+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Gold_Star_Schema.build_dims_and_fact', 'manual__2026-09-23T00:38:38.620355+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmp9bod6mtn']
+[2026-09-23T00:39:21.281+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=329) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-23T00:39:21.281+0000] {standard_task_runner.py:91} INFO - Job 144: Subtask Gold_Star_Schema.build_dims_and_fact
+[2026-09-23T00:39:21.282+0000] {standard_task_runner.py:64} INFO - Started process 330 to run task
+[2026-09-23T00:39:21.319+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-23T00:38:38.620355+00:00 [running]> on host 4318980e9d4e
+[2026-09-23T00:39:21.387+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Gold_Star_Schema.build_dims_and_fact' AIRFLOW_CTX_EXECUTION_DATE='2026-09-23T00:38:38.620355+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-23T00:38:38.620355+00:00'
+[2026-09-23T00:39:21.388+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-23T00:39:21.400+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-23T00:39:21.402+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select gold_dim_date gold_dim_product_cost gold_dim_product_info gold_dim_store dbt_lcbo_fact_table gold_fact_table']
+[2026-09-23T00:39:21.414+0000] {subprocess.py:86} INFO - Output:
+[2026-09-23T00:39:22.887+0000] {subprocess.py:93} INFO - [0m00:39:22  Running with dbt=1.12.5
+[2026-09-23T00:39:23.122+0000] {subprocess.py:93} INFO - [0m00:39:23  Registered adapter: postgres=1.9.0
+[2026-09-23T00:39:24.261+0000] {subprocess.py:93} INFO - [0m00:39:24  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-23T00:39:24.266+0000] {subprocess.py:93} INFO - [0m00:39:24
+[2026-09-23T00:39:24.267+0000] {subprocess.py:93} INFO - [0m00:39:24  Concurrency: 4 threads (target='docker')
+[2026-09-23T00:39:24.269+0000] {subprocess.py:93} INFO - [0m00:39:24
+[2026-09-23T00:39:24.619+0000] {subprocess.py:93} INFO - [0m00:39:24  1 of 6 START sql table model gold.gold_dim_date ................................ [RUN]
+[2026-09-23T00:39:24.621+0000] {subprocess.py:93} INFO - [0m00:39:24  2 of 6 START sql table model gold.gold_dim_product_cost ........................ [RUN]
+[2026-09-23T00:39:24.622+0000] {subprocess.py:93} INFO - [0m00:39:24  3 of 6 START sql table model gold.gold_dim_product_info ........................ [RUN]
+[2026-09-23T00:39:24.623+0000] {subprocess.py:93} INFO - [0m00:39:24  4 of 6 START sql table model gold.gold_dim_store ............................... [RUN]
+[2026-09-23T00:39:24.952+0000] {subprocess.py:93} INFO - [0m00:39:24  1 of 6 OK created sql table model gold.gold_dim_date ........................... [[32mSELECT 3653[0m in 0.32s]
+[2026-09-23T00:39:25.005+0000] {subprocess.py:93} INFO - [0m00:39:25  2 of 6 OK created sql table model gold.gold_dim_product_cost ................... [[32mSELECT 9[0m in 0.37s]
+[2026-09-23T00:39:25.024+0000] {subprocess.py:93} INFO - [0m00:39:25  4 of 6 OK created sql table model gold.gold_dim_store .......................... [[32mSELECT 4[0m in 0.39s]
+[2026-09-23T00:39:25.028+0000] {subprocess.py:93} INFO - [0m00:39:25  3 of 6 OK created sql table model gold.gold_dim_product_info ................... [[32mSELECT 12[0m in 0.40s]
+[2026-09-23T00:39:25.034+0000] {subprocess.py:93} INFO - [0m00:39:25  5 of 6 START sql table model silver.dbt_lcbo_fact_table ........................ [RUN]
+[2026-09-23T00:39:25.173+0000] {subprocess.py:93} INFO - [0m00:39:25  5 of 6 OK created sql table model silver.dbt_lcbo_fact_table ................... [[32mSELECT 13[0m in 0.14s]
+[2026-09-23T00:39:25.179+0000] {subprocess.py:93} INFO - [0m00:39:25  6 of 6 START sql incremental model gold.gold_fact_table ........................ [RUN]
+[2026-09-23T00:39:25.518+0000] {subprocess.py:93} INFO - [0m00:39:25  6 of 6 OK created sql incremental model gold.gold_fact_table ................... [[32mMERGE 13[0m in 0.34s]
+[2026-09-23T00:39:25.602+0000] {subprocess.py:93} INFO - [0m00:39:25
+[2026-09-23T00:39:25.603+0000] {subprocess.py:93} INFO - [0m00:39:25  Finished running 1 incremental model, 5 table models in 0 hours 0 minutes and 1.33 seconds (1.33s).
+[2026-09-23T00:39:25.718+0000] {subprocess.py:93} INFO - [0m00:39:25
+[2026-09-23T00:39:25.721+0000] {subprocess.py:93} INFO - [0m00:39:25  [32mCompleted successfully[0m
+[2026-09-23T00:39:25.723+0000] {subprocess.py:93} INFO - [0m00:39:25
+[2026-09-23T00:39:25.725+0000] {subprocess.py:93} INFO - [0m00:39:25  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[2026-09-23T00:39:29.533+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-23T00:39:29.534+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-23T00:39:29.556+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Gold_Star_Schema.build_dims_and_fact, run_id=manual__2026-09-23T00:38:38.620355+00:00, execution_date=20260923T003838, start_date=20260923T003921, end_date=20260923T003929
+[2026-09-23T00:39:29.573+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-23T00:39:29.586+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-23T00:39:29.588+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

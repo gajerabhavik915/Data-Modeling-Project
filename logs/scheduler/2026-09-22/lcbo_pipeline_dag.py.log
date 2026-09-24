@@ -9967,3 +9967,168 @@ Traceback (most recent call last):
 AttributeError: type object 'Variable' has no attribute 'get'
 [2026-09-22T23:54:16.998+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
 [2026-09-22T23:54:17.014+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.047 seconds
+[2026-09-22T23:54:47.160+0000] {processor.py:161} INFO - Started process (PID=872) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:54:47.161+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:54:47.163+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:54:47.162+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:54:47.185+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:54:47.180+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:54:47.187+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:54:47.207+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.051 seconds
+[2026-09-22T23:55:17.376+0000] {processor.py:161} INFO - Started process (PID=883) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:17.377+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:55:17.379+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:55:17.378+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:17.399+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:55:17.395+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:55:17.401+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:17.418+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.046 seconds
+[2026-09-22T23:55:47.588+0000] {processor.py:161} INFO - Started process (PID=894) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:47.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:55:47.590+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:55:47.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:47.610+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:55:47.606+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:55:47.612+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:55:47.628+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.044 seconds
+[2026-09-22T23:56:17.801+0000] {processor.py:161} INFO - Started process (PID=905) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:17.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:56:17.803+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:56:17.803+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:17.828+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:56:17.822+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:56:17.830+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:17.848+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.053 seconds
+[2026-09-22T23:56:48.002+0000] {processor.py:161} INFO - Started process (PID=916) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:48.003+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:56:48.004+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:56:48.004+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:48.026+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:56:48.022+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:56:48.027+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:56:48.044+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.046 seconds
+[2026-09-22T23:57:18.241+0000] {processor.py:161} INFO - Started process (PID=927) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:18.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:57:18.244+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:57:18.243+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:18.263+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:57:18.259+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:57:18.265+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:18.281+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.044 seconds
+[2026-09-22T23:57:48.444+0000] {processor.py:161} INFO - Started process (PID=938) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:48.446+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:57:48.447+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:57:48.447+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:48.470+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:57:48.465+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:57:48.472+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:57:48.490+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.051 seconds
+[2026-09-22T23:58:18.677+0000] {processor.py:161} INFO - Started process (PID=949) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:18.678+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:58:18.680+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:58:18.679+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:18.699+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:58:18.695+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:58:18.701+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:18.715+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.043 seconds
+[2026-09-22T23:58:48.925+0000] {processor.py:161} INFO - Started process (PID=960) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:48.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:58:48.927+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:58:48.927+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:48.947+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:58:48.943+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:58:48.949+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:58:48.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.044 seconds
+[2026-09-22T23:59:19.142+0000] {processor.py:161} INFO - Started process (PID=971) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:19.143+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:59:19.145+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:59:19.145+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:19.170+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:59:19.165+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:59:19.172+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:19.189+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.051 seconds
+[2026-09-22T23:59:49.338+0000] {processor.py:161} INFO - Started process (PID=982) to work on /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:49.339+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lcbo_pipeline_dag.py for tasks to queue
+[2026-09-22T23:59:49.340+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:59:49.340+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:49.359+0000] {logging_mixin.py:188} INFO - [2026-09-22T23:59:49.356+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/lcbo_pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/lcbo_pipeline_dag.py", line 30, in <module>
+    "PG_DBNAME": Variable.get("PG_DBNAME"),             # your data lives in the 'postgres' database
+                 ^^^^^^^^^^^^
+AttributeError: type object 'Variable' has no attribute 'get'
+[2026-09-22T23:59:49.361+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/lcbo_pipeline_dag.py
+[2026-09-22T23:59:49.376+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lcbo_pipeline_dag.py took 0.043 seconds

@@ -14,7 +14,7 @@ SELECT Distinct
 
     {{ clean_item_id('settlement.settlement_id') }} as settlement_id,
 
-    {{ parse_multi_format_date('settlement.settlement_date') }} as settlement_date,
+    {{ parse_multi_format_date('settlement.settlement_date') }} as settlement_date, 
 
     {{ clean_item_id('settlement.store_id') }} as store_id,
     {{ clean_text('settlement.store_name') }} as store_name,

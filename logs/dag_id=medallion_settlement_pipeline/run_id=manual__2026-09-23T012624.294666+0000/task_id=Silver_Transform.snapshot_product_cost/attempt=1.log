@@ -1,0 +1,36 @@
+[2026-09-23T01:26:42.064+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-23T01:26:42.088+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.snapshot_product_cost manual__2026-09-23T01:26:24.294666+00:00 [queued]>
+[2026-09-23T01:26:42.094+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.snapshot_product_cost manual__2026-09-23T01:26:24.294666+00:00 [queued]>
+[2026-09-23T01:26:42.096+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-23T01:26:42.105+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Silver_Transform.snapshot_product_cost> on 2026-09-23 01:26:24.294666+00:00
+[2026-09-23T01:26:42.115+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Silver_Transform.snapshot_product_cost', 'manual__2026-09-23T01:26:24.294666+00:00', '--job-id', '157', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmp8u8v4gac']
+[2026-09-23T01:26:42.116+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1575) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-23T01:26:42.117+0000] {standard_task_runner.py:91} INFO - Job 157: Subtask Silver_Transform.snapshot_product_cost
+[2026-09-23T01:26:42.118+0000] {standard_task_runner.py:64} INFO - Started process 1576 to run task
+[2026-09-23T01:26:42.157+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Silver_Transform.snapshot_product_cost manual__2026-09-23T01:26:24.294666+00:00 [running]> on host 4318980e9d4e
+[2026-09-23T01:26:42.225+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Silver_Transform.snapshot_product_cost' AIRFLOW_CTX_EXECUTION_DATE='2026-09-23T01:26:24.294666+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-23T01:26:24.294666+00:00'
+[2026-09-23T01:26:42.226+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-23T01:26:42.235+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-23T01:26:42.237+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt snapshot --target docker --select dim_product_cost_snapshot']
+[2026-09-23T01:26:42.250+0000] {subprocess.py:86} INFO - Output:
+[2026-09-23T01:26:43.771+0000] {subprocess.py:93} INFO - [0m01:26:43  Running with dbt=1.12.5
+[2026-09-23T01:26:44.000+0000] {subprocess.py:93} INFO - [0m01:26:44  Registered adapter: postgres=1.9.0
+[2026-09-23T01:26:45.183+0000] {subprocess.py:93} INFO - [0m01:26:45  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-23T01:26:45.186+0000] {subprocess.py:93} INFO - [0m01:26:45
+[2026-09-23T01:26:45.188+0000] {subprocess.py:93} INFO - [0m01:26:45  Concurrency: 4 threads (target='docker')
+[2026-09-23T01:26:45.189+0000] {subprocess.py:93} INFO - [0m01:26:45
+[2026-09-23T01:26:45.536+0000] {subprocess.py:93} INFO - [0m01:26:45  1 of 1 START snapshot gold.dim_product_cost_snapshot ........................... [RUN]
+[2026-09-23T01:26:45.852+0000] {subprocess.py:93} INFO - [0m01:26:45  [[33mWARNING[0m]: Data type of snapshot table timestamp columns (DATETIME) doesn't match derived column 'updated_at' (DATE). Please update snapshot config 'updated_at'.
+[2026-09-23T01:26:45.898+0000] {subprocess.py:93} INFO - [0m01:26:45  1 of 1 OK snapshotted gold.dim_product_cost_snapshot ........................... [[32mINSERT 0 0[0m in 0.36s]
+[2026-09-23T01:26:45.990+0000] {subprocess.py:93} INFO - [0m01:26:45
+[2026-09-23T01:26:45.991+0000] {subprocess.py:93} INFO - [0m01:26:45  Finished running 1 snapshot in 0 hours 0 minutes and 0.80 seconds (0.80s).
+[2026-09-23T01:26:46.133+0000] {subprocess.py:93} INFO - [0m01:26:46
+[2026-09-23T01:26:46.135+0000] {subprocess.py:93} INFO - [0m01:26:46  [32mCompleted successfully[0m
+[2026-09-23T01:26:46.136+0000] {subprocess.py:93} INFO - [0m01:26:46
+[2026-09-23T01:26:46.138+0000] {subprocess.py:93} INFO - [0m01:26:46  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[2026-09-23T01:26:49.985+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-23T01:26:49.987+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-23T01:26:50.008+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Silver_Transform.snapshot_product_cost, run_id=manual__2026-09-23T01:26:24.294666+00:00, execution_date=20260923T012624, start_date=20260923T012642, end_date=20260923T012650
+[2026-09-23T01:26:50.044+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-23T01:26:50.063+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-23T01:26:50.065+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
