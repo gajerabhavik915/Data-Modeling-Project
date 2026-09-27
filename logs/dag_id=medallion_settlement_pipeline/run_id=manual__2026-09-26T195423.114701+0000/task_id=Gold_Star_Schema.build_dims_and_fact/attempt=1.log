@@ -1,0 +1,68 @@
+[2026-09-26T19:55:06.660+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-26T19:55:06.690+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-26T19:54:23.114701+00:00 [queued]>
+[2026-09-26T19:55:06.700+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-26T19:54:23.114701+00:00 [queued]>
+[2026-09-26T19:55:06.701+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-26T19:55:06.711+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Gold_Star_Schema.build_dims_and_fact> on 2026-09-26 19:54:23.114701+00:00
+[2026-09-26T19:55:06.721+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Gold_Star_Schema.build_dims_and_fact', 'manual__2026-09-26T19:54:23.114701+00:00', '--job-id', '230', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmp897in_uk']
+[2026-09-26T19:55:06.722+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=462) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-26T19:55:06.724+0000] {standard_task_runner.py:91} INFO - Job 230: Subtask Gold_Star_Schema.build_dims_and_fact
+[2026-09-26T19:55:06.724+0000] {standard_task_runner.py:64} INFO - Started process 463 to run task
+[2026-09-26T19:55:06.762+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Gold_Star_Schema.build_dims_and_fact manual__2026-09-26T19:54:23.114701+00:00 [running]> on host 419d86c5d3f8
+[2026-09-26T19:55:06.839+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Gold_Star_Schema.build_dims_and_fact' AIRFLOW_CTX_EXECUTION_DATE='2026-09-26T19:54:23.114701+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-26T19:54:23.114701+00:00'
+[2026-09-26T19:55:06.840+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-26T19:55:06.854+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-26T19:55:06.856+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select gold_dim_date gold_dim_product_cost gold_dim_product_info gold_dim_store dbt_lcbo_fact_table gold_fact_table']
+[2026-09-26T19:55:06.869+0000] {subprocess.py:86} INFO - Output:
+[2026-09-26T19:55:08.631+0000] {subprocess.py:93} INFO - [0m19:55:08  Running with dbt=1.12.5
+[2026-09-26T19:55:08.892+0000] {subprocess.py:93} INFO - [0m19:55:08  Registered adapter: postgres=1.9.0
+[2026-09-26T19:55:10.106+0000] {subprocess.py:93} INFO - [0m19:55:10  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-26T19:55:10.110+0000] {subprocess.py:93} INFO - [0m19:55:10
+[2026-09-26T19:55:10.111+0000] {subprocess.py:93} INFO - [0m19:55:10  Concurrency: 4 threads (target='docker')
+[2026-09-26T19:55:10.112+0000] {subprocess.py:93} INFO - [0m19:55:10
+[2026-09-26T19:55:10.472+0000] {subprocess.py:93} INFO - [0m19:55:10  1 of 6 START sql table model gold.gold_dim_date ................................ [RUN]
+[2026-09-26T19:55:10.474+0000] {subprocess.py:93} INFO - [0m19:55:10  2 of 6 START sql table model gold.gold_dim_product_cost ........................ [RUN]
+[2026-09-26T19:55:10.476+0000] {subprocess.py:93} INFO - [0m19:55:10  3 of 6 START sql table model gold.gold_dim_product_info ........................ [RUN]
+[2026-09-26T19:55:10.477+0000] {subprocess.py:93} INFO - [0m19:55:10  4 of 6 START sql table model gold.gold_dim_store ............................... [RUN]
+[2026-09-26T19:55:10.959+0000] {subprocess.py:93} INFO - [0m19:55:10  1 of 6 OK created sql table model gold.gold_dim_date ........................... [[32mSELECT 3653[0m in 0.47s]
+[2026-09-26T19:55:10.961+0000] {subprocess.py:93} INFO - [0m19:55:10  3 of 6 OK created sql table model gold.gold_dim_product_info ................... [[32mSELECT 24[0m in 0.47s]
+[2026-09-26T19:55:10.983+0000] {subprocess.py:93} INFO - [0m19:55:10  2 of 6 OK created sql table model gold.gold_dim_product_cost ................... [[32mSELECT 9[0m in 0.50s]
+[2026-09-26T19:55:10.986+0000] {subprocess.py:93} INFO - [0m19:55:10  4 of 6 OK created sql table model gold.gold_dim_store .......................... [[32mSELECT 6[0m in 0.50s]
+[2026-09-26T19:55:10.997+0000] {subprocess.py:93} INFO - [0m19:55:10  5 of 6 START sql table model silver.dbt_lcbo_fact_table ........................ [RUN]
+[2026-09-26T19:55:11.150+0000] {subprocess.py:93} INFO - [0m19:55:11  5 of 6 OK created sql table model silver.dbt_lcbo_fact_table ................... [[32mSELECT 18[0m in 0.15s]
+[2026-09-26T19:55:11.155+0000] {subprocess.py:93} INFO - [0m19:55:11  6 of 6 START sql incremental model gold.gold_fact_table ........................ [RUN]
+[2026-09-26T19:55:11.384+0000] {subprocess.py:93} INFO - [0m19:55:11  6 of 6 ERROR creating sql incremental model gold.gold_fact_table ............... [[31mERROR[0m in 0.23s]
+[2026-09-26T19:55:11.467+0000] {subprocess.py:93} INFO - [0m19:55:11
+[2026-09-26T19:55:11.469+0000] {subprocess.py:93} INFO - [0m19:55:11  Finished running 1 incremental model, 5 table models in 0 hours 0 minutes and 1.35 seconds (1.35s).
+[2026-09-26T19:55:11.600+0000] {subprocess.py:93} INFO - [0m19:55:11
+[2026-09-26T19:55:11.603+0000] {subprocess.py:93} INFO - [0m19:55:11  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[2026-09-26T19:55:11.605+0000] {subprocess.py:93} INFO - [0m19:55:11
+[2026-09-26T19:55:11.607+0000] {subprocess.py:93} INFO - [0m19:55:11  [[31mERROR[0m]: in model gold_fact_table (models/gold_LCBO_marts/gold_fact_table.sql)
+[2026-09-26T19:55:11.608+0000] {subprocess.py:93} INFO - [0m19:55:11    Database Error in model gold_fact_table (models/gold_LCBO_marts/gold_fact_table.sql)
+[2026-09-26T19:55:11.609+0000] {subprocess.py:93} INFO -   MERGE command cannot affect row a second time
+[2026-09-26T19:55:11.610+0000] {subprocess.py:93} INFO -   HINT:  Ensure that not more than one source row matches any one target row.
+[2026-09-26T19:55:11.611+0000] {subprocess.py:93} INFO -   compiled code at target/run/dbt_transformation_lcbo/models/gold_LCBO_marts/gold_fact_table.sql
+[2026-09-26T19:55:11.611+0000] {subprocess.py:93} INFO - [0m19:55:11
+[2026-09-26T19:55:11.612+0000] {subprocess.py:93} INFO - [0m19:55:11    compiled code at target/compiled/dbt_transformation_lcbo/models/gold_LCBO_marts/gold_fact_table.sql
+[2026-09-26T19:55:11.613+0000] {subprocess.py:93} INFO - [0m19:55:11
+[2026-09-26T19:55:11.614+0000] {subprocess.py:93} INFO - [0m19:55:11  Done. PASS=5 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[2026-09-26T19:55:15.595+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-09-26T19:55:15.597+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-26T19:55:15.608+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-09-26T19:55:15.615+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=medallion_settlement_pipeline, task_id=Gold_Star_Schema.build_dims_and_fact, run_id=manual__2026-09-26T19:54:23.114701+00:00, execution_date=20260926T195423, start_date=20260926T195506, end_date=20260926T195515
+[2026-09-26T19:55:15.637+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 230 for task Gold_Star_Schema.build_dims_and_fact (Bash command failed. The command returned a non-zero exit code 1.; 463)
+[2026-09-26T19:55:15.689+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-09-26T19:55:15.707+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-26T19:55:15.712+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

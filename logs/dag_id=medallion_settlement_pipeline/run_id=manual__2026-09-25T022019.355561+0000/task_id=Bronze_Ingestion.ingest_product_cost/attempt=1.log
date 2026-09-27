@@ -1,0 +1,29 @@
+[2026-09-25T02:20:23.620+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-25T02:20:23.644+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.ingest_product_cost manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:23.650+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.ingest_product_cost manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:23.652+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-25T02:20:23.661+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Bronze_Ingestion.ingest_product_cost> on 2026-09-25 02:20:19.355561+00:00
+[2026-09-25T02:20:23.669+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Bronze_Ingestion.ingest_product_cost', 'manual__2026-09-25T02:20:19.355561+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpwxbynaq2']
+[2026-09-25T02:20:23.671+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1379) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-25T02:20:23.672+0000] {standard_task_runner.py:91} INFO - Job 216: Subtask Bronze_Ingestion.ingest_product_cost
+[2026-09-25T02:20:23.672+0000] {standard_task_runner.py:64} INFO - Started process 1380 to run task
+[2026-09-25T02:20:23.705+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.ingest_product_cost manual__2026-09-25T02:20:19.355561+00:00 [running]> on host 275ddd85eb37
+[2026-09-25T02:20:23.769+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Bronze_Ingestion.ingest_product_cost' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T02:20:19.355561+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T02:20:19.355561+00:00'
+[2026-09-25T02:20:23.771+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-25T02:20:23.780+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-25T02:20:23.782+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_product_cost.py']
+[2026-09-25T02:20:23.794+0000] {subprocess.py:86} INFO - Output:
+[2026-09-25T02:20:24.509+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,508 - INFO - Successfully connected to Postgres
+[2026-09-25T02:20:24.510+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,509 - INFO - Connected to Postgres database successfully.
+[2026-09-25T02:20:24.514+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,514 - INFO - Product cost data read successfully from /opt/***/source_files/Master Product Cost/dim_product_cost.csv.
+[2026-09-25T02:20:24.521+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,520 - INFO - Table dim_product_cost truncated successfully.
+[2026-09-25T02:20:24.525+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,525 - INFO - total records inserted: 9 into bronze.dim_product_cost
+[2026-09-25T02:20:24.526+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,525 - INFO - Inserted 9 rows into bronze.dim_product_cost table.
+[2026-09-25T02:20:24.527+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,525 - INFO - All chunks processed successfully.
+[2026-09-25T02:20:24.528+0000] {subprocess.py:93} INFO - 2026-09-25 02:20:24,525 - INFO - Postgres connection closed.
+[2026-09-25T02:20:24.604+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-25T02:20:24.606+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-25T02:20:24.623+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Bronze_Ingestion.ingest_product_cost, run_id=manual__2026-09-25T02:20:19.355561+00:00, execution_date=20260925T022019, start_date=20260925T022023, end_date=20260925T022024
+[2026-09-25T02:20:24.649+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-25T02:20:24.669+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T02:20:24.672+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

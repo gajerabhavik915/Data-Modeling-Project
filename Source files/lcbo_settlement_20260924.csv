@@ -1,0 +1,10 @@
+settlement_id,settlement_date,store_id,store_name,store_city,item_id,item_description,category,supplier_name,units_sold,unit_price,gross_sales,discount_amount,net_sales,cost_of_goods,gross_margin
+SETT-2026-004,9/24/2026,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Suntory Global Spirits,52,34.95,1817.4,90.87,1726.53,1040,686.53
+SETT-2026-004,9/24/2026,101,queen's quay lcbo,toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Red Wine,Treasury Wine Estates,44,19.95,877.8,43.89,833.91,352,481.91
+SETT-2026-004,9/24/2026,101,Queen's Quay LCBO,Toronto,8.92456E+8,Moët & Chandon Brut NV 750mL,Sparkling Wine,LVMH,11,64.95,714.45,0,714.45,330,384.45
+SETT-2026-004,9/24/2026,102,Bloor West Village LCBO,Toronto,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,30,41.95,"1,258.50",62.93,"1,195.57",660,535.57
+SETT-2026-004,9/24/2026,102,Bloor West Village LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,98,38.95,3817.1,190.86,3626.24,1960,1666.24
+SETT-2026-004,9/24/2026,103,Kensington Market LCBO ,Toronto,2.67803E+8,Absolut Vodka 750mL,Vodka,Pernod Ricard,55,29.95,1647.25,82.36,1564.89,770,794.89
+SETT-2026-004,9/24/2026,103,Kensington Market LCBO,Toronto,1.15078E+8,Aperol Aperitivo 750mL,Liqueur,Campari Group,40,27.95,1118,0,1118,520,598
+SETT-2026-004,9/24/2026,201,Elgin Street LCBO,Ottawa,6.01874E+8,Tanqueray London Dry Gin 750mL,Gin,Diageo,24,34.95,838.8,0,838.8,480,358.8
+SETT-2026-004,9/24/2026,301,King Street LCBO,Hamilton,9.34512E+8,Casamigos Blanco Tequila 750mL,Tequila,Diageo,17,79.95,"1,359.15",67.96,"1,291.19",680,611.19

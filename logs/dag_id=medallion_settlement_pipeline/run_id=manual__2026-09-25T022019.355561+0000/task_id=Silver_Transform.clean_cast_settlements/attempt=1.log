@@ -1,0 +1,48 @@
+[2026-09-25T02:20:25.494+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-25T02:20:25.525+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:25.533+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:25.534+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-25T02:20:25.543+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Silver_Transform.clean_cast_settlements> on 2026-09-25 02:20:19.355561+00:00
+[2026-09-25T02:20:25.552+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Silver_Transform.clean_cast_settlements', 'manual__2026-09-25T02:20:19.355561+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpjkbfbwi9']
+[2026-09-25T02:20:25.554+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1398) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-25T02:20:25.554+0000] {standard_task_runner.py:91} INFO - Job 217: Subtask Silver_Transform.clean_cast_settlements
+[2026-09-25T02:20:25.555+0000] {standard_task_runner.py:64} INFO - Started process 1399 to run task
+[2026-09-25T02:20:25.593+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T02:20:19.355561+00:00 [running]> on host 275ddd85eb37
+[2026-09-25T02:20:25.664+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Silver_Transform.clean_cast_settlements' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T02:20:19.355561+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T02:20:19.355561+00:00'
+[2026-09-25T02:20:25.665+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-25T02:20:25.680+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-25T02:20:25.682+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select dbt_lcbo_raw dbt_product_cost dbt_lcbo_columns_trans dbt_lcbo_columns_type dbt_lcbo_cleansed_settlement dbt_lcbo_filterout_negative_sales dbt_dim_product_transform']
+[2026-09-25T02:20:25.694+0000] {subprocess.py:86} INFO - Output:
+[2026-09-25T02:20:27.794+0000] {subprocess.py:93} INFO - [0m02:20:27  Running with dbt=1.12.5
+[2026-09-25T02:20:28.107+0000] {subprocess.py:93} INFO - [0m02:20:28  Registered adapter: postgres=1.9.0
+[2026-09-25T02:20:28.334+0000] {subprocess.py:93} INFO - [0m02:20:28  Unable to do partial parsing because of a version mismatch
+[2026-09-25T02:20:30.466+0000] {subprocess.py:93} INFO - [0m02:20:30  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-25T02:20:30.471+0000] {subprocess.py:93} INFO - [0m02:20:30
+[2026-09-25T02:20:30.473+0000] {subprocess.py:93} INFO - [0m02:20:30  Concurrency: 4 threads (target='docker')
+[2026-09-25T02:20:30.474+0000] {subprocess.py:93} INFO - [0m02:20:30
+[2026-09-25T02:20:30.745+0000] {subprocess.py:93} INFO - [0m02:20:30  1 of 7 START sql table model silver.dbt_lcbo_raw ............................... [RUN]
+[2026-09-25T02:20:30.746+0000] {subprocess.py:93} INFO - [0m02:20:30  2 of 7 START sql table model silver.dbt_product_cost ........................... [RUN]
+[2026-09-25T02:20:30.954+0000] {subprocess.py:93} INFO - [0m02:20:30  2 of 7 OK created sql table model silver.dbt_product_cost ...................... [[32mSELECT 9[0m in 0.20s]
+[2026-09-25T02:20:30.956+0000] {subprocess.py:93} INFO - [0m02:20:30  1 of 7 OK created sql table model silver.dbt_lcbo_raw .......................... [[32mSELECT 9[0m in 0.21s]
+[2026-09-25T02:20:30.964+0000] {subprocess.py:93} INFO - [0m02:20:30  3 of 7 START sql table model silver.dbt_dim_product_transform .................. [RUN]
+[2026-09-25T02:20:30.965+0000] {subprocess.py:93} INFO - [0m02:20:30  4 of 7 START sql table model silver.dbt_lcbo_columns_trans ..................... [RUN]
+[2026-09-25T02:20:31.119+0000] {subprocess.py:93} INFO - [0m02:20:31  4 of 7 OK created sql table model silver.dbt_lcbo_columns_trans ................ [[32mSELECT 9[0m in 0.15s]
+[2026-09-25T02:20:31.121+0000] {subprocess.py:93} INFO - [0m02:20:31  3 of 7 OK created sql table model silver.dbt_dim_product_transform ............. [[32mSELECT 9[0m in 0.15s]
+[2026-09-25T02:20:31.127+0000] {subprocess.py:93} INFO - [0m02:20:31  5 of 7 START sql table model silver.dbt_lcbo_columns_type ...................... [RUN]
+[2026-09-25T02:20:31.251+0000] {subprocess.py:93} INFO - [0m02:20:31  5 of 7 OK created sql table model silver.dbt_lcbo_columns_type ................. [[32mSELECT 9[0m in 0.12s]
+[2026-09-25T02:20:31.256+0000] {subprocess.py:93} INFO - [0m02:20:31  6 of 7 START sql table model silver.dbt_lcbo_cleansed_settlement ............... [RUN]
+[2026-09-25T02:20:31.257+0000] {subprocess.py:93} INFO - [0m02:20:31  7 of 7 START sql incremental model silver.dbt_lcbo_filterout_negative_sales .... [RUN]
+[2026-09-25T02:20:31.453+0000] {subprocess.py:93} INFO - [0m02:20:31  6 of 7 OK created sql table model silver.dbt_lcbo_cleansed_settlement .......... [[32mSELECT 9[0m in 0.19s]
+[2026-09-25T02:20:31.466+0000] {subprocess.py:93} INFO - [0m02:20:31  7 of 7 OK created sql incremental model silver.dbt_lcbo_filterout_negative_sales  [[32mMERGE 0[0m in 0.20s]
+[2026-09-25T02:20:31.548+0000] {subprocess.py:93} INFO - [0m02:20:31
+[2026-09-25T02:20:31.549+0000] {subprocess.py:93} INFO - [0m02:20:31  Finished running 1 incremental model, 6 table models in 0 hours 0 minutes and 1.07 seconds (1.07s).
+[2026-09-25T02:20:31.659+0000] {subprocess.py:93} INFO - [0m02:20:31
+[2026-09-25T02:20:31.661+0000] {subprocess.py:93} INFO - [0m02:20:31  [32mCompleted successfully[0m
+[2026-09-25T02:20:31.663+0000] {subprocess.py:93} INFO - [0m02:20:31
+[2026-09-25T02:20:31.665+0000] {subprocess.py:93} INFO - [0m02:20:31  Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=7
+[2026-09-25T02:20:35.470+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-25T02:20:35.472+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-25T02:20:35.493+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Silver_Transform.clean_cast_settlements, run_id=manual__2026-09-25T02:20:19.355561+00:00, execution_date=20260925T022019, start_date=20260925T022025, end_date=20260925T022035
+[2026-09-25T02:20:35.522+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-25T02:20:35.542+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T02:20:35.545+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

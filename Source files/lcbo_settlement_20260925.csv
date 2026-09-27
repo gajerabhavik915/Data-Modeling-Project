@@ -1,0 +1,11 @@
+settlement_id,settlement_date,store_id,store_name,store_city,item_id,item_description,category,supplier_name,units_sold,unit_price,gross_sales,discount_amount,net_sales,cost_of_goods,gross_margin
+SETT-2026-006,9/26/2026,101,Queen's Quay LCBO,Toronto,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,50,21.95,1097.5,54.88,1042.62,400,642.62
+SETT-2026-006,9/26/2026,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Suntory Global Spirits,48,36.95,"1,773.60",88.68,"1,684.92",960,724.92
+SETT-2026-006,9/26/2026,101,Queen's Quay LCBO,Toronto,4.88231E+8,Coors Light 24x355mL,Beer,Molson Coors,140,38.95,5453,272.65,5180.35,2800,2380.35
+SETT-2026-006,9/26/2026,102,Bloor West Village LCBO,Toronto,8.92456E+8,Moët & Chandon Brut NV 750mL,Sparkling Wine,LVMH,13,64.95,844.35,0,844.35,390,454.35
+SETT-2026-006,9/26/2026,102,Bloor West Village LCBO,Toronto,9.99999E+8,Ketel One Vodka 750mL,Vodka,Diageo,19,24.95,474.05,0,474.05,228,246.05
+SETT-2026-006,9/26/2026,103,Kensington Market LCBO,Toronto,1.15078E+8,Aperol Aperitivo 750mL,Liqueur,Campari Group,46,27.95,"1,285.70",64.29,"1,221.41",598,623.41
+SETT-2026-006,9/26/2026,201,Elgin Street LCBO,Ottawa,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Suntory Global Spirits,29,36.95,1071.55,0,1071.55,580,491.55
+SETT-2026-006,9/26/2026,201,Elgin Street LCBO,Ottawa,7.23019E+8,Johnnie Walker Red 40% 750mL,Whisky,Diageo,22,41.95,922.9,46.15,876.75,484,392.75
+SETT-2026-006,9/26/2026,301,King Street LCBO,Hamilton,3.10045E+8,Meiomi Pinot Noir 750mL,Wine,Treasury Wine Estates,35,21.95,768.25,38.41,729.84,280,449.84
+SETT-2026-006-LATE,9/25/2026,101,Queen's Quay LCBO,Toronto,5.55132E+8,Canadian Club 1858 40% 750mL,Whisky,Suntory Global Spirits,50,36.95,"1,773.60",88.68,"1,684.92",960,724.92

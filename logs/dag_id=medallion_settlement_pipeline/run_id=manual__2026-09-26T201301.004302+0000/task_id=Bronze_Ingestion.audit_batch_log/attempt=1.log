@@ -1,0 +1,30 @@
+[2026-09-26T20:13:01.770+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-26T20:13:01.805+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.audit_batch_log manual__2026-09-26T20:13:01.004302+00:00 [queued]>
+[2026-09-26T20:13:01.812+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.audit_batch_log manual__2026-09-26T20:13:01.004302+00:00 [queued]>
+[2026-09-26T20:13:01.813+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-26T20:13:01.822+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Bronze_Ingestion.audit_batch_log> on 2026-09-26 20:13:01.004302+00:00
+[2026-09-26T20:13:01.831+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Bronze_Ingestion.audit_batch_log', 'manual__2026-09-26T20:13:01.004302+00:00', '--job-id', '239', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmpnd0e2zno']
+[2026-09-26T20:13:01.833+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=992) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-26T20:13:01.834+0000] {standard_task_runner.py:91} INFO - Job 239: Subtask Bronze_Ingestion.audit_batch_log
+[2026-09-26T20:13:01.834+0000] {standard_task_runner.py:64} INFO - Started process 993 to run task
+[2026-09-26T20:13:01.871+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Bronze_Ingestion.audit_batch_log manual__2026-09-26T20:13:01.004302+00:00 [running]> on host 419d86c5d3f8
+[2026-09-26T20:13:01.937+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Bronze_Ingestion.audit_batch_log' AIRFLOW_CTX_EXECUTION_DATE='2026-09-26T20:13:01.004302+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-26T20:13:01.004302+00:00'
+[2026-09-26T20:13:01.939+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-26T20:13:01.955+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-26T20:13:01.957+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/etl_scripts/bronze_batch_audit.py']
+[2026-09-26T20:13:01.972+0000] {subprocess.py:86} INFO - Output:
+[2026-09-26T20:13:02.281+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,281 - INFO - Successfully connected to Postgres
+[2026-09-26T20:13:02.285+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,285 - INFO - Found 7 already processed files in DB
+[2026-09-26T20:13:02.305+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,305 - INFO - Found 5 files in folder /opt/***/source_files
+[2026-09-26T20:13:02.306+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,305 - INFO - Pending files to process: ['ed419da2d8b9b0226e1775ae3b28f1f7baae5ffd8dd0c8da52b4a44b37536a72']
+[2026-09-26T20:13:02.307+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,305 - INFO - 1 new file(s) to process: ['ed419da2d8b9b0226e1775ae3b28f1f7baae5ffd8dd0c8da52b4a44b37536a72']
+[2026-09-26T20:13:02.308+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,305 - INFO - Started with ed419da2d8b9b0226e1775ae3b28f1f7baae5ffd8dd0c8da52b4a44b37536a72
+[2026-09-26T20:13:02.309+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,308 - INFO - Created new batch with run_id 8 for lcbo_settlement_20260925.csv at 2026-09-26 20:13:02.305523
+[2026-09-26T20:13:02.309+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,308 - INFO - Postgres connection closed.
+[2026-09-26T20:13:02.310+0000] {subprocess.py:93} INFO - 2026-09-26 20:13:02,309 - INFO - batch audit result: {'batch_created': True, 'batch_id': 8, 'related_date': datetime.datetime(2026, 9, 26, 20, 13, 2, 305523), 'file_hash': 'ed419da2d8b9b0226e1775ae3b28f1f7baae5ffd8dd0c8da52b4a44b37536a72', 'all_processed_files': False}
+[2026-09-26T20:13:02.320+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-26T20:13:02.322+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-26T20:13:02.342+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Bronze_Ingestion.audit_batch_log, run_id=manual__2026-09-26T20:13:01.004302+00:00, execution_date=20260926T201301, start_date=20260926T201301, end_date=20260926T201302
+[2026-09-26T20:13:02.370+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-26T20:13:02.390+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-26T20:13:02.393+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

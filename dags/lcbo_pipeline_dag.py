@@ -1,7 +1,7 @@
 """
 LCBO Settlement Reconciliation Pipeline — Airflow DAG
 
-Option A: ONE DAG, three visual task groups (Bronze / Silver / Gold).
+ONE DAG, three visual task groups (Bronze / Silver / Gold).
 Ordering is guaranteed by the >> dependencies between the groups, so
 Silver never starts before Bronze finishes, and Gold never starts
 before Silver finishes.
@@ -39,7 +39,7 @@ DB_ENV = {
 
 default_args = {
     "owner": "bhavik",
-    "retries": 0,          # keep 0 while learning, so failures surface immediately
+    "retries": 0,          
 }
 
 with DAG(
@@ -58,19 +58,19 @@ with DAG(
             task_id="audit_batch_log",
             bash_command=f"{ETL}/bronze_batch_audit.py",
             env=DB_ENV,
-            append_env=True  # keep the PATH so python resolves
+            append_env=True  
         )
         raw = BashOperator(
             task_id="ingest_settlements",
             bash_command=f"{ETL}/bronze_lcbo_raw.py",
             env=DB_ENV,
-            append_env=True  # keep the PATH so python resolves
+            append_env=True  
         )
         product_cost = BashOperator(
             task_id="ingest_product_cost",
             bash_command=f"{ETL}/bronze_product_cost.py",
             env=DB_ENV,
-            append_env=True  # keep the PATH so python resolves
+            append_env=True  
         )
         # order within Bronze
         audit >> raw >> product_cost
@@ -124,5 +124,5 @@ with DAG(
         )
 
     # ======================= THE ORDER THAT MATTERS ==========================
-    # This one line enforces Bronze -> Silver -> Gold.
+    # This one line enforces Bronze -> Silver -> Gold
     bronze >> silver >> gold

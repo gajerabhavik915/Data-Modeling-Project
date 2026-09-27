@@ -1,0 +1,35 @@
+[2026-09-25T02:20:44.699+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-25T02:20:44.722+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.join_settlement_to_cost manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:44.730+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.join_settlement_to_cost manual__2026-09-25T02:20:19.355561+00:00 [queued]>
+[2026-09-25T02:20:44.731+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-25T02:20:44.741+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Silver_Transform.join_settlement_to_cost> on 2026-09-25 02:20:19.355561+00:00
+[2026-09-25T02:20:44.749+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Silver_Transform.join_settlement_to_cost', 'manual__2026-09-25T02:20:19.355561+00:00', '--job-id', '219', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmp3k9cwg76']
+[2026-09-25T02:20:44.751+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1455) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-25T02:20:44.752+0000] {standard_task_runner.py:91} INFO - Job 219: Subtask Silver_Transform.join_settlement_to_cost
+[2026-09-25T02:20:44.753+0000] {standard_task_runner.py:64} INFO - Started process 1456 to run task
+[2026-09-25T02:20:44.787+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Silver_Transform.join_settlement_to_cost manual__2026-09-25T02:20:19.355561+00:00 [running]> on host 275ddd85eb37
+[2026-09-25T02:20:44.854+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Silver_Transform.join_settlement_to_cost' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T02:20:19.355561+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T02:20:19.355561+00:00'
+[2026-09-25T02:20:44.855+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-25T02:20:44.865+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-25T02:20:44.867+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select dbt_lcbo_joined_dim_prod_cost']
+[2026-09-25T02:20:44.879+0000] {subprocess.py:86} INFO - Output:
+[2026-09-25T02:20:46.381+0000] {subprocess.py:93} INFO - [0m02:20:46  Running with dbt=1.12.5
+[2026-09-25T02:20:46.629+0000] {subprocess.py:93} INFO - [0m02:20:46  Registered adapter: postgres=1.9.0
+[2026-09-25T02:20:47.846+0000] {subprocess.py:93} INFO - [0m02:20:47  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-25T02:20:47.851+0000] {subprocess.py:93} INFO - [0m02:20:47
+[2026-09-25T02:20:47.852+0000] {subprocess.py:93} INFO - [0m02:20:47  Concurrency: 4 threads (target='docker')
+[2026-09-25T02:20:47.854+0000] {subprocess.py:93} INFO - [0m02:20:47
+[2026-09-25T02:20:48.127+0000] {subprocess.py:93} INFO - [0m02:20:48  1 of 1 START sql table model silver.dbt_lcbo_joined_dim_prod_cost .............. [RUN]
+[2026-09-25T02:20:48.453+0000] {subprocess.py:93} INFO - [0m02:20:48  1 of 1 OK created sql table model silver.dbt_lcbo_joined_dim_prod_cost ......... [[32mSELECT 9[0m in 0.32s]
+[2026-09-25T02:20:48.522+0000] {subprocess.py:93} INFO - [0m02:20:48
+[2026-09-25T02:20:48.523+0000] {subprocess.py:93} INFO - [0m02:20:48  Finished running 1 table model in 0 hours 0 minutes and 0.67 seconds (0.67s).
+[2026-09-25T02:20:48.741+0000] {subprocess.py:93} INFO - [0m02:20:48
+[2026-09-25T02:20:48.742+0000] {subprocess.py:93} INFO - [0m02:20:48  [32mCompleted successfully[0m
+[2026-09-25T02:20:48.743+0000] {subprocess.py:93} INFO - [0m02:20:48
+[2026-09-25T02:20:48.745+0000] {subprocess.py:93} INFO - [0m02:20:48  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[2026-09-25T02:20:52.412+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-25T02:20:52.413+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-25T02:20:52.435+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=medallion_settlement_pipeline, task_id=Silver_Transform.join_settlement_to_cost, run_id=manual__2026-09-25T02:20:19.355561+00:00, execution_date=20260925T022019, start_date=20260925T022044, end_date=20260925T022052
+[2026-09-25T02:20:52.472+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-25T02:20:52.494+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T02:20:52.496+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

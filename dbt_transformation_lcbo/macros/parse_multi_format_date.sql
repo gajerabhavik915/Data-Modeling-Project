@@ -11,6 +11,10 @@ case
         then to_date(trim({{ column }}), 'DD-Mon-YYYY')
     when trim({{ column }}) ~ '^\d{1,2}-[A-Za-z]{3}-\d{4}$'
         then to_date(trim({{ column }}), 'DD-Mon-YY')
+    when trim({{ column }}) ~ '^\d{1,2}/\d{1,2}/\d{4}$' and split_part(trim({{ column }}), '/', 1)::int > 12
+        then to_date(trim({{ column }}), 'DD/MM/YYYY')
+    when trim({{ column }}) ~ '^\d{1,2}/\d{1,2}/\d{4}$'
+        then to_date(trim({{ column }}), 'MM/DD/YYYY')
     else null
 end
 

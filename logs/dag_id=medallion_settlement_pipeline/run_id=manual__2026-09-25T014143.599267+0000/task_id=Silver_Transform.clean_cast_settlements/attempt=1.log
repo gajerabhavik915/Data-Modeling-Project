@@ -1,0 +1,67 @@
+[2026-09-25T01:41:50.588+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-25T01:41:50.615+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T01:41:43.599267+00:00 [queued]>
+[2026-09-25T01:41:50.622+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T01:41:43.599267+00:00 [queued]>
+[2026-09-25T01:41:50.624+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-25T01:41:50.634+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Silver_Transform.clean_cast_settlements> on 2026-09-25 01:41:43.599267+00:00
+[2026-09-25T01:41:50.643+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'medallion_settlement_pipeline', 'Silver_Transform.clean_cast_settlements', 'manual__2026-09-25T01:41:43.599267+00:00', '--job-id', '213', '--raw', '--subdir', 'DAGS_FOLDER/lcbo_pipeline_dag.py', '--cfg-path', '/tmp/tmphqt8nh6v']
+[2026-09-25T01:41:50.647+0000] {standard_task_runner.py:91} INFO - Job 213: Subtask Silver_Transform.clean_cast_settlements
+[2026-09-25T01:41:50.647+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=484) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-25T01:41:50.648+0000] {standard_task_runner.py:64} INFO - Started process 485 to run task
+[2026-09-25T01:41:50.683+0000] {task_command.py:426} INFO - Running <TaskInstance: medallion_settlement_pipeline.Silver_Transform.clean_cast_settlements manual__2026-09-25T01:41:43.599267+00:00 [running]> on host 275ddd85eb37
+[2026-09-25T01:41:50.752+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bhavik' AIRFLOW_CTX_DAG_ID='medallion_settlement_pipeline' AIRFLOW_CTX_TASK_ID='Silver_Transform.clean_cast_settlements' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T01:41:43.599267+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T01:41:43.599267+00:00'
+[2026-09-25T01:41:50.753+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-25T01:41:50.764+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-25T01:41:50.765+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --target docker --select dbt_lcbo_raw dbt_product_cost dbt_lcbo_columns_trans dbt_lcbo_columns_type dbt_lcbo_cleansed_settlement dbt_lcbo_filterout_negative_sales dbt_dim_product_transform']
+[2026-09-25T01:41:50.779+0000] {subprocess.py:86} INFO - Output:
+[2026-09-25T01:41:53.207+0000] {subprocess.py:93} INFO - [0m01:41:53  Running with dbt=1.12.5
+[2026-09-25T01:41:53.564+0000] {subprocess.py:93} INFO - [0m01:41:53  Registered adapter: postgres=1.9.0
+[2026-09-25T01:41:53.800+0000] {subprocess.py:93} INFO - [0m01:41:53  Unable to do partial parsing because of a version mismatch
+[2026-09-25T01:41:56.080+0000] {subprocess.py:93} INFO - [0m01:41:56  Found 14 models, 2 snapshots, 3 sources, 597 macros
+[2026-09-25T01:41:56.086+0000] {subprocess.py:93} INFO - [0m01:41:56
+[2026-09-25T01:41:56.088+0000] {subprocess.py:93} INFO - [0m01:41:56  Concurrency: 4 threads (target='docker')
+[2026-09-25T01:41:56.090+0000] {subprocess.py:93} INFO - [0m01:41:56
+[2026-09-25T01:41:56.484+0000] {subprocess.py:93} INFO - [0m01:41:56  1 of 7 START sql table model silver.dbt_lcbo_raw ............................... [RUN]
+[2026-09-25T01:41:56.486+0000] {subprocess.py:93} INFO - [0m01:41:56  2 of 7 START sql table model silver.dbt_product_cost ........................... [RUN]
+[2026-09-25T01:41:56.870+0000] {subprocess.py:93} INFO - [0m01:41:56  2 of 7 OK created sql table model silver.dbt_product_cost ...................... [[32mSELECT 9[0m in 0.37s]
+[2026-09-25T01:41:56.872+0000] {subprocess.py:93} INFO - [0m01:41:56  1 of 7 OK created sql table model silver.dbt_lcbo_raw .......................... [[32mSELECT 9[0m in 0.38s]
+[2026-09-25T01:41:56.882+0000] {subprocess.py:93} INFO - [0m01:41:56  3 of 7 START sql table model silver.dbt_dim_product_transform .................. [RUN]
+[2026-09-25T01:41:56.884+0000] {subprocess.py:93} INFO - [0m01:41:56  4 of 7 START sql table model silver.dbt_lcbo_columns_trans ..................... [RUN]
+[2026-09-25T01:41:57.080+0000] {subprocess.py:93} INFO - [0m01:41:57  4 of 7 ERROR creating sql table model silver.dbt_lcbo_columns_trans ............ [[31mERROR[0m in 0.19s]
+[2026-09-25T01:41:57.092+0000] {subprocess.py:93} INFO - [0m01:41:57  5 of 7 SKIP relation silver.dbt_lcbo_columns_type .............................. [[33mSKIP[0m]
+[2026-09-25T01:41:57.105+0000] {subprocess.py:93} INFO - [0m01:41:57  3 of 7 OK created sql table model silver.dbt_dim_product_transform ............. [[32mSELECT 9[0m in 0.21s]
+[2026-09-25T01:41:57.107+0000] {subprocess.py:93} INFO - [0m01:41:57  6 of 7 SKIP relation silver.dbt_lcbo_cleansed_settlement ....................... [[33mSKIP[0m]
+[2026-09-25T01:41:57.109+0000] {subprocess.py:93} INFO - [0m01:41:57  7 of 7 SKIP relation silver.dbt_lcbo_filterout_negative_sales .................. [[33mSKIP[0m]
+[2026-09-25T01:41:57.304+0000] {subprocess.py:93} INFO - [0m01:41:57
+[2026-09-25T01:41:57.306+0000] {subprocess.py:93} INFO - [0m01:41:57  Finished running 1 incremental model, 6 table models in 0 hours 0 minutes and 1.21 seconds (1.21s).
+[2026-09-25T01:41:57.428+0000] {subprocess.py:93} INFO - [0m01:41:57
+[2026-09-25T01:41:57.430+0000] {subprocess.py:93} INFO - [0m01:41:57  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[2026-09-25T01:41:57.431+0000] {subprocess.py:93} INFO - [0m01:41:57
+[2026-09-25T01:41:57.433+0000] {subprocess.py:93} INFO - [0m01:41:57  [[31mERROR[0m]: in model dbt_lcbo_columns_trans (models/silver_lcbo_transform/dbt_lcbo_columns_trans.sql)
+[2026-09-25T01:41:57.435+0000] {subprocess.py:93} INFO - [0m01:41:57    Database Error in model dbt_lcbo_columns_trans (models/silver_lcbo_transform/dbt_lcbo_columns_trans.sql)
+[2026-09-25T01:41:57.436+0000] {subprocess.py:93} INFO -   date/time field value out of range: "24/09/2026"
+[2026-09-25T01:41:57.436+0000] {subprocess.py:93} INFO -   compiled code at target/run/dbt_transformation_lcbo/models/silver_lcbo_transform/dbt_lcbo_columns_trans.sql
+[2026-09-25T01:41:57.437+0000] {subprocess.py:93} INFO - [0m01:41:57
+[2026-09-25T01:41:57.438+0000] {subprocess.py:93} INFO - [0m01:41:57    compiled code at target/compiled/dbt_transformation_lcbo/models/silver_lcbo_transform/dbt_lcbo_columns_trans.sql
+[2026-09-25T01:41:57.439+0000] {subprocess.py:93} INFO - [0m01:41:57
+[2026-09-25T01:41:57.440+0000] {subprocess.py:93} INFO - [0m01:41:57  Done. PASS=3 WARN=0 ERROR=1 SKIP=3 NO-OP=0 REUSED=0 TOTAL=7
+[2026-09-25T01:42:01.231+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-09-25T01:42:01.232+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-25T01:42:01.241+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-09-25T01:42:01.247+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=medallion_settlement_pipeline, task_id=Silver_Transform.clean_cast_settlements, run_id=manual__2026-09-25T01:41:43.599267+00:00, execution_date=20260925T014143, start_date=20260925T014150, end_date=20260925T014201
+[2026-09-25T01:42:01.259+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 213 for task Silver_Transform.clean_cast_settlements (Bash command failed. The command returned a non-zero exit code 1.; 485)
+[2026-09-25T01:42:01.283+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-09-25T01:42:01.302+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T01:42:01.306+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
