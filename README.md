@@ -220,7 +220,7 @@ The two `dbt snapshot` steps are correctly sandwiched between `dbt run` phases, 
 ### Setup
 ```bash
 # 1. Clone
-git clone <your-repo-url>
+git clone https://github.com/gajerabhavik915/Data-Modeling-Project
 cd "Data Modeling Project"
 
 # 2. Set AIRFLOW_UID in .env
