@@ -35,32 +35,8 @@ Settlement reconciliation is a demanding test for a data pipeline because the so
 
 ## Architecture
 
-```
-                          ┌─────────────────────────────────────────────┐
-                          │   Apache Airflow (Docker) — one DAG          │
-                          │   Bronze ▸ Silver ▸ Gold task groups,        │
-                          │   execution order enforced by dependencies   │
-                          └─────────────────────────────────────────────┘
-                                             │ orchestrates
-            ┌────────────────────────────────┼────────────────────────────────┐
-            ▼                                 ▼                                 ▼
- ┌───────────────────┐           ┌───────────────────────┐        ┌────────────────────────┐
- │  BRONZE (Python)  │           │   SILVER (dbt)        │        │   GOLD (dbt)           │
- │  raw ingest, TEXT │  ───────▶ │  clean · cast · flag  │ ─────▶ │  star schema           │
- │  content-hash     │           │  SCD2 snapshots       │        │  dims + incremental    │
- │  batch audit log  │           │  point-in-time join   │        │  fact (merge)          │
- └───────────────────┘           └───────────────────────┘        └────────────────────────┘
-            │                                 │                                 │
-            └─────────────────────────────────┴─────────────────────────────────┘
-                                             ▼
-                          ┌─────────────────────────────────────────────┐
-                          │  PostgreSQL — bronze / silver / gold schemas │
-                          └─────────────────────────────────────────────┘
-```
+<img width="1536" height="1024" alt="ChatGPT Image Sep 28, 2026, 08_48_31 PM" src="https://github.com/user-attachments/assets/ee8d5804-b2d9-4177-b2de-dc3bb8677ba9" />
 
-Each layer has a distinct responsibility: **Bronze** preserves raw truth, **Silver** transforms and conforms, **Gold** serves analytics.
-
----
 
 ## Tech stack
 
