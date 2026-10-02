@@ -157,6 +157,8 @@ The entire pipeline runs as **one Airflow DAG** with three task groups — **Bro
 
 The two `dbt snapshot` steps are correctly sandwiched between `dbt run` phases, matching the dependency order below.
 
+<img width="1888" height="925" alt="image" src="https://github.com/user-attachments/assets/4e1b4ee8-c100-49f8-9299-1497d79c4298" />
+
 ---
 
 ## Execution order
@@ -184,6 +186,8 @@ The two `dbt snapshot` steps are correctly sandwiched between `dbt run` phases, 
 14–19. dim_date → dim_product_cost → dim_product_info → dim_store
        → fact (silver) → gold_fact_table
 ```
+
+<img width="1566" height="631" alt="image" src="https://github.com/user-attachments/assets/8e0eafe1-0f6e-4c61-9a08-750e271ec1a5" />
 
 ---
 
